@@ -1,3 +1,5 @@
 export { default as Navigation } from './Navigation'
 export { default as TextbookList } from './TextbookList'
 export { default as TextbookViewer } from './TextbookViewer'
+export { default as AuthPage } from './AuthPage'
+export { default as ProgressDashboard } from './ProgressDashboard'

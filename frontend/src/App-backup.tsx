@@ -1,3 +1,4 @@
+// Backup of original App.tsx
 import { Routes, Route } from 'react-router-dom'
 import { useState, useEffect } from 'react'
 import { Navigation, TextbookList, TextbookViewer, AuthPage, ProgressDashboard } from './components'
@@ -28,16 +29,19 @@ function App() {
           path: 'math',
           chapters: [
             { id: 'overview', title: 'Mathematics Overview', file: 'index.md', type: 'page' },
-            { 
-              id: 'algebra', 
-              title: 'Chapter 1: Algebra', 
-              file: 'chapters/01-algebra/index.md', 
-              type: 'chapter',
-              children: [
-                { id: 'linear-equations', title: 'Linear Equations', file: 'chapters/01-algebra/01-linear-equations.md', type: 'section' },
-                { id: 'quadratic-functions', title: 'Quadratic Functions', file: 'chapters/01-algebra/02-quadratic-functions.md', type: 'section' }
-              ]
-            }
+            { id: 'algebra', title: 'Algebra', file: 'algebra.md', type: 'page' },
+            { id: 'calculus', title: 'Calculus', file: 'calculus.md', type: 'page' },
+            { id: 'geometry', title: 'Geometry', file: 'geometry.md', type: 'page' },
+            { id: 'statistics', title: 'Statistics', file: 'statistics.md', type: 'page' }
+          ]
+        },
+        {
+          id: 'frontend',
+          title: 'Frontend Development',
+          description: 'Modern frontend development with React, HTML, CSS, and JavaScript',
+          path: 'frontend',
+          chapters: [
+            { id: 'overview', title: 'Frontend Overview', file: 'index.md' }
           ]
         },
         {
