@@ -11,32 +11,22 @@ const ProgressDashboard = () => {
   const [isClearing, setIsClearing] = useState(false)
 
   const handleClearProgress = async () => {
-    if (!confirm('Are you sure you want to clear ALL your reading progress? This action cannot be undone.')) {
-      return
-    }
-    
     setIsClearing(true)
     try {
       await clearAllProgress()
-      alert('All progress cleared successfully!')
     } catch (error) {
-      alert('Error clearing progress. Please try again.')
+      console.error('Error clearing progress:', error)
     } finally {
       setIsClearing(false)
     }
   }
 
   const handleClearBookmarks = async () => {
-    if (!confirm('Are you sure you want to clear ALL your bookmarks? This action cannot be undone.')) {
-      return
-    }
-    
     setIsClearing(true)
     try {
       await clearAllBookmarks()
-      alert('All bookmarks cleared successfully!')
     } catch (error) {
-      alert('Error clearing bookmarks. Please try again.')
+      console.error('Error clearing bookmarks:', error)
     } finally {
       setIsClearing(false)
     }

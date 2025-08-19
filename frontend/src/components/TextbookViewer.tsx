@@ -80,6 +80,10 @@ const TextbookViewer = ({ textbooks }: TextbookViewerProps) => {
   const startTimeRef = useRef<number>(Date.now())
   const hasTrackedPageRef = useRef<boolean>(false)
   const currentPageRef = useRef<string>('')
+  const trackProgressRef = useRef(trackProgress)
+  
+  // Update the ref when trackProgress changes
+  trackProgressRef.current = trackProgress
   
   const textbook = textbooks.find(t => t.id === id)
   
@@ -168,7 +172,7 @@ const TextbookViewer = ({ textbooks }: TextbookViewerProps) => {
     return () => {
       clearTimeout(trackingTimeout)
     }
-  }, [textbook, content, chapter, section, isAuthenticated, trackProgress, location.pathname])
+  }, [textbook, content, chapter, section, isAuthenticated, location.pathname]) // Removed trackProgress from dependencies
 
   // Track time spent and save progress on page unload/navigation
   useEffect(() => {
