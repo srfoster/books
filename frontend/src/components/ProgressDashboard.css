@@ -48,6 +48,36 @@
   transform: translateY(-1px);
 }
 
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.load-more-btn {
+  padding: 6px 12px;
+  border: 1px solid #667eea;
+  border-radius: 4px;
+  background-color: transparent;
+  color: #667eea;
+  font-size: 0.85rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.load-more-btn:hover:not(:disabled) {
+  background-color: #667eea;
+  color: white;
+}
+
+.load-more-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
 .clear-btn:disabled {
   opacity: 0.5;
   cursor: not-allowed;

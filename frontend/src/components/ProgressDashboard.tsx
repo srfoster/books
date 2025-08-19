@@ -6,14 +6,28 @@ import './ProgressDashboard.css'
 
 const ProgressDashboard = () => {
   const { user, isAuthenticated } = useAuth()
-  const { getUserProgress, clearAllProgress, loading: progressLoading } = useReadingProgress()
-  const { getUserBookmarks, clearAllBookmarks, loading: bookmarksLoading } = useBookmarks()
+  const { getUserProgress, loadAllProgress, clearAllProgress, loading: progressLoading } = useReadingProgress()
+  const { getUserBookmarks, loadAllBookmarks, clearAllBookmarks, loading: bookmarksLoading } = useBookmarks()
   const [isClearing, setIsClearing] = useState(false)
+
+  // Remove the automatic loading to prevent infinite loops
+  // Users can manually load more records if needed
+
+  const handleLoadAllProgress = async () => {
+    await loadAllProgress()
+  }
+
+  const handleLoadAllBookmarks = async () => {
+    await loadAllBookmarks()
+  }
 
   const handleClearProgress = async () => {
     setIsClearing(true)
     try {
-      await clearAllProgress()
+      const result = await clearAllProgress()
+      if (result?.success) {
+        console.log(`✅ Batch deleted ${result.deleted} progress records`)
+      }
     } catch (error) {
       console.error('Error clearing progress:', error)
     } finally {
@@ -24,7 +38,10 @@ const ProgressDashboard = () => {
   const handleClearBookmarks = async () => {
     setIsClearing(true)
     try {
-      await clearAllBookmarks()
+      const result = await clearAllBookmarks()
+      if (result?.success) {
+        console.log(`✅ Batch deleted ${result.deleted} bookmark records`)
+      }
     } catch (error) {
       console.error('Error clearing bookmarks:', error)
     } finally {
@@ -70,21 +87,32 @@ const ProgressDashboard = () => {
             className="clear-btn danger"
             disabled={isClearing || progress.length === 0}
           >
-            Clear All Progress
+            Clear All Progress ({progress.length})
           </button>
           <button 
             onClick={handleClearBookmarks} 
             className="clear-btn danger"
             disabled={isClearing || bookmarks.length === 0}
           >
-            Clear All Bookmarks
+            Clear All Bookmarks ({bookmarks.length})
           </button>
         </div>
       </div>
 
       <div className="dashboard-content">
         <section className="progress-section">
-          <h2>Recent Progress</h2>
+          <div className="section-header">
+            <h2>Reading Progress ({progress.length} records)</h2>
+            {progress.length >= 20 && (
+              <button 
+                onClick={handleLoadAllProgress} 
+                className="load-more-btn"
+                disabled={progressLoading}
+              >
+                {progressLoading ? 'Loading...' : 'Load All Records'}
+              </button>
+            )}
+          </div>
           {progress.length === 0 ? (
             <div className="empty-state">
               <p>You haven't started reading any textbooks yet.</p>
@@ -94,7 +122,7 @@ const ProgressDashboard = () => {
             </div>
           ) : (
             <div className="progress-list">
-              {progress.slice(0, 10).map((record, index) => (
+              {progress.map((record, index) => (
                 <div key={record.id || index} className="progress-item">
                   <div className="progress-info">
                     <h3>{record.data.textbookId}</h3>
@@ -124,7 +152,18 @@ const ProgressDashboard = () => {
         </section>
 
         <section className="bookmarks-section">
-          <h2>Bookmarks</h2>
+          <div className="section-header">
+            <h2>Bookmarks ({bookmarks.length} records)</h2>
+            {bookmarks.length >= 20 && (
+              <button 
+                onClick={handleLoadAllBookmarks} 
+                className="load-more-btn"
+                disabled={bookmarksLoading}
+              >
+                {bookmarksLoading ? 'Loading...' : 'Load All Records'}
+              </button>
+            )}
+          </div>
           {bookmarks.length === 0 ? (
             <div className="empty-state">
               <p>No bookmarks saved yet.</p>
