@@ -1,0 +1,234 @@
+.app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.main-content {
+  flex: 1;
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Textbook list styles */
+.textbook-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.textbook-card {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 1.5rem;
+  text-decoration: none;
+  color: inherit;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.textbook-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.textbook-card h3 {
+  margin: 0 0 1rem 0;
+  color: #646cff;
+}
+
+.textbook-card p {
+  margin: 0;
+  color: #666;
+}
+
+/* Navigation styles */
+.navigation {
+  background-color: #1a1a1a;
+  padding: 1rem 2rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.nav-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-brand {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: white;
+  text-decoration: none;
+}
+
+.nav-links {
+  display: flex;
+  gap: 1rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  transition: background-color 0.2s;
+}
+
+.nav-links a:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Textbook viewer styles */
+.textbook-viewer {
+  display: flex;
+  gap: 2rem;
+  min-height: calc(100vh - 120px);
+}
+
+.sidebar {
+  width: 300px;
+  border-right: 1px solid #ddd;
+  padding-right: 2rem;
+}
+
+.content-area {
+  flex: 1;
+  max-width: none;
+}
+
+.chapter-list {
+  list-style: none;
+  padding: 0;
+  margin: 1rem 0;
+}
+
+.chapter-list.level-0 {
+  margin-left: 0;
+}
+
+.chapter-list.level-1 {
+  margin-left: 1rem;
+  padding-left: 1rem;
+  border-left: 2px solid #e0e0e0;
+}
+
+.chapter-list.level-2 {
+  margin-left: 1.5rem;
+  padding-left: 0.5rem;
+  border-left: 1px solid #f0f0f0;
+}
+
+.chapter-list li {
+  margin: 0.5rem 0;
+}
+
+.chapter-list a {
+  display: block;
+  padding: 0.5rem;
+  border-radius: 4px;
+  text-decoration: none;
+  color: inherit;
+  transition: background-color 0.2s;
+}
+
+.chapter-list a:hover,
+.chapter-list a.active {
+  background-color: #f0f0f0;
+  color: #646cff;
+}
+
+.chapter-type {
+  font-weight: normal;
+}
+
+.chapter-type.chapter {
+  font-weight: bold;
+  color: #333;
+}
+
+.chapter-type.section {
+  font-weight: 500;
+  color: #555;
+}
+
+.chapter-type.subsection {
+  font-weight: normal;
+  color: #777;
+  font-size: 0.9em;
+}
+
+.markdown-content {
+  line-height: 1.6;
+  max-width: none;
+}
+
+.markdown-content h1,
+.markdown-content h2,
+.markdown-content h3 {
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}
+
+.markdown-content h1 {
+  border-bottom: 2px solid #646cff;
+  padding-bottom: 0.5rem;
+}
+
+.markdown-content code {
+  background-color: #f4f4f4;
+  padding: 0.2rem 0.4rem;
+  border-radius: 3px;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.markdown-content pre {
+  background-color: #f4f4f4;
+  padding: 1rem;
+  border-radius: 4px;
+  overflow-x: auto;
+}
+
+.markdown-content blockquote {
+  border-left: 4px solid #646cff;
+  margin: 1rem 0;
+  padding-left: 1rem;
+  color: #666;
+}
+
+@media (prefers-color-scheme: dark) {
+  .textbook-card {
+    border-color: #444;
+  }
+  
+  .textbook-card p {
+    color: #ccc;
+  }
+  
+  .sidebar {
+    border-right-color: #444;
+  }
+  
+  .chapter-list a:hover,
+  .chapter-list a.active {
+    background-color: #333;
+  }
+  
+  .markdown-content code {
+    background-color: #333;
+    color: #fff;
+  }
+  
+  .markdown-content pre {
+    background-color: #333;
+    color: #fff;
+  }
+}

@@ -1,0 +1,1 @@
+- The Denial of Death - Ernest Becker
