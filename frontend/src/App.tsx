@@ -75,6 +75,7 @@ function App() {
           <Route path="/" element={<TextbookList textbooks={textbooks} />} />
           <Route path="/textbook/:id" element={<TextbookViewer textbooks={textbooks} />} />
           <Route path="/textbook/:id/:chapter" element={<TextbookViewer textbooks={textbooks} />} />
+          <Route path="/textbook/:id/:chapter/:section" element={<TextbookViewer textbooks={textbooks} />} />
         </Routes>
       </main>
     </div>

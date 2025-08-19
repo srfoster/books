@@ -23,7 +23,9 @@ export interface ContentFile {
 export const loadMarkdownContent = async (textbookPath: string, fileName: string = 'index.md'): Promise<string> => {
   try {
     // Construct the URL to fetch the markdown file from the public directory
-    const url = `/textbooks/${textbookPath}/${fileName}`
+    // Use different base paths for development vs production
+    const basePath = window.location.hostname === 'localhost' ? '' : '/books'
+    const url = `${basePath}/textbooks/${textbookPath}/${fileName}`
     
     const response = await fetch(url)
     

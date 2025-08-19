@@ -27,45 +27,67 @@ const findChapterById = (chapters: Chapter[], chapterId: string): Chapter | null
 }
 
 // Component to render navigation tree
-const NavigationTree = ({ chapters, textbookId, currentChapterId, level = 0 }: {
+const NavigationTree = ({ chapters, textbookId, currentChapterId, level = 0, parentChapterId }: {
   chapters: Chapter[]
   textbookId: string
   currentChapterId?: string
   level?: number
+  parentChapterId?: string
 }) => {
   return (
     <ul className={`chapter-list level-${level}`}>
-      {chapters.map((chapter) => (
-        <li key={chapter.id}>
-          <Link
-            to={`/textbook/${textbookId}/${chapter.id}`}
-            className={currentChapterId === chapter.id ? 'active' : ''}
-          >
-            <span className={`chapter-type ${chapter.type || 'section'}`}>
-              {chapter.title}
-            </span>
-          </Link>
-          {chapter.children && chapter.children.length > 0 && (
-            <NavigationTree
-              chapters={chapter.children}
-              textbookId={textbookId}
-              currentChapterId={currentChapterId}
-              level={level + 1}
-            />
-          )}
-        </li>
-      ))}
+      {chapters.map((chapter) => {
+        // Generate URL based on whether this is a top-level chapter or a section
+        const url = parentChapterId 
+          ? `/textbook/${textbookId}/${parentChapterId}/${chapter.id}`
+          : `/textbook/${textbookId}/${chapter.id}`
+          
+        return (
+          <li key={chapter.id}>
+            <Link
+              to={url}
+              className={currentChapterId === chapter.id ? 'active' : ''}
+            >
+              <span className={`chapter-type ${chapter.type || 'section'}`}>
+                {chapter.title}
+              </span>
+            </Link>
+            {chapter.children && chapter.children.length > 0 && (
+              <NavigationTree
+                chapters={chapter.children}
+                textbookId={textbookId}
+                currentChapterId={currentChapterId}
+                level={level + 1}
+                parentChapterId={chapter.id}
+              />
+            )}
+          </li>
+        )
+      })}
     </ul>
   )
 }
 
 const TextbookViewer = ({ textbooks }: TextbookViewerProps) => {
-  const { id, chapter } = useParams<{ id: string; chapter?: string }>()
+  const { id, chapter, section } = useParams<{ id: string; chapter?: string; section?: string }>()
   const [content, setContent] = useState<string>('')
   const [loading, setLoading] = useState(false)
   
   const textbook = textbooks.find(t => t.id === id)
-  const currentChapter = chapter ? findChapterById(textbook?.chapters || [], chapter) : null
+  
+  // Find the current item to display - could be a chapter or a section
+  let currentItem: Chapter | null = null
+
+  if (section) {
+    // If we have a section, find it within the chapter
+    const parentChapter = chapter ? findChapterById(textbook?.chapters || [], chapter) : null
+    if (parentChapter?.children) {
+      currentItem = findChapterById(parentChapter.children, section)
+    }
+  } else if (chapter) {
+    // If we just have a chapter, find it
+    currentItem = findChapterById(textbook?.chapters || [], chapter)
+  }
 
   useEffect(() => {
     const loadContent = async () => {
@@ -75,9 +97,9 @@ const TextbookViewer = ({ textbooks }: TextbookViewerProps) => {
       try {
         let fileName = 'index.md'
         
-        if (currentChapter) {
-          // Load specific chapter
-          fileName = currentChapter.file
+        if (currentItem) {
+          // Load specific chapter or section
+          fileName = currentItem.file
         }
         
         // Load the actual markdown content using our service
@@ -92,7 +114,7 @@ const TextbookViewer = ({ textbooks }: TextbookViewerProps) => {
     }
 
     loadContent()
-  }, [textbook, currentChapter])
+  }, [textbook, currentItem])
 
   if (!textbook) {
     return (
@@ -117,7 +139,7 @@ const TextbookViewer = ({ textbooks }: TextbookViewerProps) => {
             <NavigationTree
               chapters={textbook.chapters}
               textbookId={textbook.id}
-              currentChapterId={chapter}
+              currentChapterId={section || chapter}
             />
           </>
         )}
