@@ -4,7 +4,7 @@ import { useState } from 'react'
 import './Navigation.css'
 
 const Navigation = () => {
-  const { user, logout, isAuthenticated, isLoading } = useAuth()
+  const { user, logout, isAuthenticated } = useAuth()
   
   const [showUserMenu, setShowUserMenu] = useState(false)
 
@@ -12,17 +12,12 @@ const Navigation = () => {
     <nav className="navigation">
       <div className="nav-content">
         <Link to="/" className="nav-brand">
-          Textbook Library
+          Library
         </Link>
         <ul className="nav-links">
           <li>
             <Link to="/">Home</Link>
           </li>
-          {isAuthenticated && (
-            <li>
-              <Link to="/progress">My Progress</Link>
-            </li>
-          )}
           <li>
             <Link to="/about">About</Link>
           </li>
@@ -45,13 +40,6 @@ const Navigation = () => {
                     <span className="user-email">{user.email}</span>
                   </div>
                   <hr />
-                  <Link 
-                    to="/progress" 
-                    className="dropdown-link"
-                    onClick={() => setShowUserMenu(false)}
-                  >
-                    My Progress
-                  </Link>
                   <button onClick={() => { logout(); setShowUserMenu(false); }}>
                     Logout
                   </button>

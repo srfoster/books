@@ -36,7 +36,7 @@ const AuthPage: React.FC<AuthPageProps> = ({ onAuthSuccess }) => {
       <div className="auth-container">
         <div className="auth-header">
           <h1>Textbook Platform</h1>
-          <p>Sign in to track your reading progress and save bookmarks</p>
+          <p>Sign in to access the full platform features</p>
         </div>
 
         <div className="auth-toggle">
@@ -85,7 +85,6 @@ const AuthPage: React.FC<AuthPageProps> = ({ onAuthSuccess }) => {
             >
               Continue as guest
             </button>
-            {' '}(progress won't be saved)
           </p>
         </div>
       </div>

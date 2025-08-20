@@ -8,8 +8,7 @@ interface TextbookListProps {
 const TextbookList = ({ textbooks }: TextbookListProps) => {
   return (
     <div>
-      <h1>Available Textbooks</h1>
-      <p>Choose from our collection of educational materials:</p>
+      <h1>Books</h1>
       
       <div className="textbook-grid">
         {textbooks.map((textbook) => (

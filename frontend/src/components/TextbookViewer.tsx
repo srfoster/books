@@ -1,14 +1,12 @@
-import { useParams, Link, useLocation } from 'react-router-dom'
-import { useState, useEffect, useRef } from 'react'
+import { useParams, Link } from 'react-router-dom'
+import { useState, useEffect } from 'react'
 import ReactMarkdown from 'react-markdown'
 import remarkGfm from 'remark-gfm'
 import remarkMath from 'remark-math'
 import rehypeKatex from 'rehype-katex'
 import 'katex/dist/katex.min.css'
-import { useAuth } from '@srfoster/one-backend-react'
 import { Textbook, Chapter } from '../types'
 import { loadMarkdownContent } from '../services/contentService'
-import { useReadingProgress } from '../services/progressService'
 
 interface TextbookViewerProps {
   textbooks: Textbook[]
@@ -72,18 +70,8 @@ const NavigationTree = ({ chapters, textbookId, currentChapterId, level = 0, par
 
 const TextbookViewer = ({ textbooks }: TextbookViewerProps) => {
   const { id, chapter, section } = useParams<{ id: string; chapter?: string; section?: string }>()
-  const location = useLocation()
-  const { isAuthenticated } = useAuth()
-  const { trackProgress } = useReadingProgress()
   const [content, setContent] = useState<string>('')
   const [loading, setLoading] = useState(false)
-  const startTimeRef = useRef<number>(Date.now())
-  const hasTrackedPageRef = useRef<boolean>(false)
-  const currentPageRef = useRef<string>('')
-  const trackProgressRef = useRef(trackProgress)
-  
-  // Update the ref when trackProgress changes
-  trackProgressRef.current = trackProgress
   
   const textbook = textbooks.find(t => t.id === id)
   
@@ -127,135 +115,6 @@ const TextbookViewer = ({ textbooks }: TextbookViewerProps) => {
 
     loadContent()
   }, [textbook, currentItem])
-
-  // Track reading progress
-  useEffect(() => {
-    if (!isAuthenticated || !textbook || !content) return
-
-    const currentPath = location.pathname
-    
-    // If this is a new page, reset tracking flags
-    if (currentPageRef.current !== currentPath) {
-      currentPageRef.current = currentPath
-      hasTrackedPageRef.current = false
-      startTimeRef.current = Date.now()
-    }
-
-    // Only track once per page load
-    if (hasTrackedPageRef.current) return
-
-    // Mark as tracked to prevent duplicate calls
-    hasTrackedPageRef.current = true
-
-    // Debounced tracking function
-    const trackPageStart = async () => {
-      try {
-        await trackProgress({
-          textbookId: textbook.id,
-          chapterId: chapter || undefined,
-          sectionId: section || undefined,
-          completedAt: new Date().toISOString(),
-          currentPage: currentPath,
-          progressPercentage: calculateProgressPercentage(),
-          timeSpent: 0 // Initial time spent
-        })
-      } catch (error) {
-        console.error('Error tracking progress:', error)
-        // Reset flag on error so we can retry
-        hasTrackedPageRef.current = false
-      }
-    }
-
-    // Delay the tracking slightly to ensure everything is loaded
-    const trackingTimeout = setTimeout(trackPageStart, 1000)
-
-    return () => {
-      clearTimeout(trackingTimeout)
-    }
-  }, [textbook, content, chapter, section, isAuthenticated, location.pathname]) // Removed trackProgress from dependencies
-
-  // Track time spent and save progress on page unload/navigation
-  useEffect(() => {
-    if (!isAuthenticated || !textbook) return
-
-    let lastSaveTime = 0
-
-    const saveProgressBeforeLeave = async () => {
-      const now = Date.now()
-      const timeSpent = Math.floor((now - startTimeRef.current) / 1000)
-      const currentPath = location.pathname
-
-      // Prevent duplicate saves within 5 seconds
-      if (now - lastSaveTime < 5000) return
-      
-      if (timeSpent > 5) { // Only save if user spent more than 5 seconds
-        try {
-          lastSaveTime = now
-          await trackProgress({
-            textbookId: textbook.id,
-            chapterId: chapter || undefined,
-            sectionId: section || undefined,
-            completedAt: new Date().toISOString(),
-            currentPage: currentPath,
-            progressPercentage: calculateProgressPercentage(),
-            timeSpent
-          })
-        } catch (error) {
-          console.error('Error saving progress:', error)
-        }
-      }
-    }
-
-    // Save progress when user leaves the page
-    const handleBeforeUnload = () => {
-      saveProgressBeforeLeave()
-    }
-
-    // Also save progress periodically (every 60 seconds if actively reading)
-    const progressInterval = setInterval(() => {
-      if (document.visibilityState === 'visible') {
-        saveProgressBeforeLeave()
-        startTimeRef.current = Date.now() // Reset timer for next interval
-      }
-    }, 60000)
-
-    window.addEventListener('beforeunload', handleBeforeUnload)
-
-    return () => {
-      window.removeEventListener('beforeunload', handleBeforeUnload)
-      clearInterval(progressInterval)
-      saveProgressBeforeLeave() // Save when component unmounts
-    }
-  }, [textbook, chapter, section, isAuthenticated, trackProgress, location.pathname])
-
-  // Helper function to calculate reading progress percentage
-  const calculateProgressPercentage = (): number => {
-    if (!textbook) return 0
-
-    // Simple calculation based on current position in textbook structure
-    const totalChapters = textbook.chapters.length
-    if (!chapter) return 0
-
-    const chapterIndex = textbook.chapters.findIndex(ch => ch.id === chapter)
-    if (chapterIndex === -1) return 0
-
-    if (!section) {
-      // Just reached this chapter
-      return Math.round(((chapterIndex + 1) / totalChapters) * 100)
-    }
-
-    // If we have sections, calculate more precisely
-    const currentChapter = textbook.chapters[chapterIndex]
-    if (currentChapter?.children) {
-      const sectionIndex = currentChapter.children.findIndex(sec => sec.id === section)
-      const sectionsInChapter = currentChapter.children.length
-      const sectionProgress = (sectionIndex + 1) / sectionsInChapter
-      const chapterProgress = (chapterIndex + sectionProgress) / totalChapters
-      return Math.round(chapterProgress * 100)
-    }
-
-    return Math.round(((chapterIndex + 1) / totalChapters) * 100)
-  }
 
   if (!textbook) {
     return (
