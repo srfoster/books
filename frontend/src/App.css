@@ -1,7 +1,37 @@
+/* Dark mode support using CSS custom properties */
+:root {
+  --bg-color: #ffffff;
+  --text-color: #333333;
+  --border-color: #ddd;
+  --hover-bg: #f0f0f0;
+  --active-bg: #e6f3ff;
+  --active-color: #646cff;
+  --sidebar-border: #ddd;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg-color: #1a1a1a;
+    --text-color: #e0e0e0;
+    --border-color: #444;
+    --hover-bg: #2a2a2a;
+    --active-bg: #2a3a4a;
+    --active-color: #64b5f6;
+    --sidebar-border: #444;
+  }
+  
+  body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+  }
+}
+
 .app {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+  background-color: var(--bg-color);
+  color: var(--text-color);
 }
 
 .main-content {
@@ -21,34 +51,43 @@
 }
 
 .loading {
-  color: #666;
+  color: var(--text-color);
+  opacity: 0.7;
   font-size: 1.1rem;
 }
 
 .error {
-  background: #fee;
-  border: 1px solid #fcc;
+  background: rgba(255, 99, 71, 0.1);
+  border: 1px solid rgba(255, 99, 71, 0.3);
   border-radius: 8px;
-  color: #c33;
+  color: #ff6347;
+}
+
+@media (prefers-color-scheme: dark) {
+  .error {
+    background: rgba(255, 99, 71, 0.15);
+    border-color: rgba(255, 99, 71, 0.4);
+  }
 }
 
 .error h2 {
   margin-top: 0;
-  color: #a22;
+  color: #ff6347;
 }
 
 .error button {
-  background: #c33;
+  background: #ff6347;
   color: white;
   border: none;
   padding: 0.5rem 1rem;
   border-radius: 4px;
   cursor: pointer;
   margin-top: 1rem;
+  transition: background-color 0.2s ease;
 }
 
 .error button:hover {
-  background: #a22;
+  background: #e55347;
 }
 
 /* Textbook list styles */
@@ -60,27 +99,30 @@
 }
 
 .textbook-card {
-  border: 1px solid #ddd;
+  border: 1px solid var(--border-color);
   border-radius: 8px;
   padding: 1.5rem;
   text-decoration: none;
-  color: inherit;
-  transition: transform 0.2s, box-shadow 0.2s;
+  color: var(--text-color);
+  transition: all 0.2s ease;
+  background-color: var(--bg-color);
 }
 
 .textbook-card:hover {
   transform: translateY(-4px);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 4px 12px rgba(100, 181, 246, 0.2);
+  border-color: var(--active-color);
 }
 
 .textbook-card h3 {
   margin: 0 0 1rem 0;
-  color: #646cff;
+  color: var(--active-color);
 }
 
 .textbook-card p {
   margin: 0;
-  color: #666;
+  color: var(--text-color);
+  opacity: 0.8;
 }
 
 /* Navigation styles */
@@ -134,13 +176,16 @@
 
 .sidebar {
   width: 300px;
-  border-right: 1px solid #ddd;
+  border-right: 1px solid var(--sidebar-border);
   padding-right: 2rem;
+  background-color: var(--bg-color);
 }
 
 .content-area {
   flex: 1;
   max-width: none;
+  background-color: var(--bg-color);
+  color: var(--text-color);
 }
 
 .chapter-list {
@@ -156,13 +201,13 @@
 .chapter-list.level-1 {
   margin-left: 1rem;
   padding-left: 1rem;
-  border-left: 2px solid #e0e0e0;
+  border-left: 2px solid var(--border-color);
 }
 
 .chapter-list.level-2 {
   margin-left: 1.5rem;
   padding-left: 0.5rem;
-  border-left: 1px solid #f0f0f0;
+  border-left: 1px solid var(--border-color);
 }
 
 .chapter-list li {
@@ -174,14 +219,20 @@
   padding: 0.5rem;
   border-radius: 4px;
   text-decoration: none;
-  color: inherit;
-  transition: background-color 0.2s;
+  color: var(--text-color);
+  transition: all 0.2s ease;
 }
 
-.chapter-list a:hover,
+.chapter-list a:hover {
+  background-color: var(--hover-bg);
+  color: var(--active-color);
+}
+
 .chapter-list a.active {
-  background-color: #f0f0f0;
-  color: #646cff;
+  background-color: var(--active-bg);
+  color: var(--active-color);
+  font-weight: 500;
+  border: 1px solid var(--active-color);
 }
 
 .chapter-type {
@@ -190,12 +241,13 @@
 
 .chapter-type.chapter {
   font-weight: bold;
-  color: #333;
+  color: var(--text-color);
 }
 
 .chapter-type.section {
   font-weight: 500;
-  color: #555;
+  color: var(--text-color);
+  opacity: 0.8;
 }
 
 .chapter-type.subsection {

@@ -16,3 +16,7 @@ chapters:
     file: chapters/01-defining-education/index.md
     type: chapter
     children:
+      - id: story-1
+        title: Story Time
+        file: chapters/01-defining-education/01-story-1.md
+        type: section
