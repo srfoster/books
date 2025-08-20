@@ -1,0 +1,12 @@
+title: AI & Machine Learning
+description: Comprehensive guide to artificial intelligence, machine learning, and language models
+config:
+  authors:
+    - Stephen R. Foster
+  version: "1.0"
+
+chapters:
+  - id: overview
+    title: About this Book
+    file: index.md
+    type: page

@@ -13,6 +13,44 @@
   box-sizing: border-box;
 }
 
+/* Loading and error states */
+.loading, .error {
+  text-align: center;
+  padding: 3rem;
+  margin: 2rem 0;
+}
+
+.loading {
+  color: #666;
+  font-size: 1.1rem;
+}
+
+.error {
+  background: #fee;
+  border: 1px solid #fcc;
+  border-radius: 8px;
+  color: #c33;
+}
+
+.error h2 {
+  margin-top: 0;
+  color: #a22;
+}
+
+.error button {
+  background: #c33;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 1rem;
+}
+
+.error button:hover {
+  background: #a22;
+}
+
 /* Textbook list styles */
 .textbook-grid {
   display: grid;

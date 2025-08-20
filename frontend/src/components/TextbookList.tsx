@@ -19,6 +19,7 @@ const TextbookList = ({ textbooks }: TextbookListProps) => {
           >
             <h3>{textbook.title}</h3>
             <p>{textbook.description}</p>
+            <br/>
             {textbook.chapters.length > 0 && (
               <small>{textbook.chapters.length} chapters available</small>
             )}

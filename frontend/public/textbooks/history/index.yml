@@ -1,0 +1,12 @@
+title: History
+description: Historical events and analysis
+config:
+  authors:
+    - History Department
+  version: "1.0"
+
+chapters:
+  - id: overview
+    title: Understanding History
+    file: index.md
+    type: page
