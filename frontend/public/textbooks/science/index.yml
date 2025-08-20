@@ -1,0 +1,12 @@
+title: 🔬 Science
+description: ...
+config:
+  authors:
+    - Stephen R. Foster
+  version: "1.0"
+
+chapters:
+  - id: overview
+    title: Science
+    file: index.md
+    type: page

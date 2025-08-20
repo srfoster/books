@@ -1,5 +1,5 @@
-title: AI & Machine Learning
-description: Comprehensive guide to artificial intelligence, machine learning, and language models
+title: 🤖 AI & Machine Learning
+description: Comprehensive guide to artificial intelligence, machine learning, data science, and language models
 config:
   authors:
     - Stephen R. Foster
@@ -7,6 +7,6 @@ config:
 
 chapters:
   - id: overview
-    title: About this Book
+    title: Overview
     file: index.md
     type: page

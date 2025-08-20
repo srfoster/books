@@ -1,0 +1,12 @@
+title: 🥊 Mixed Martial Arts
+description: A comprehensive guide to mixed martial arts
+config:
+  authors:
+    - Your Name
+  version: "1.0"
+
+chapters:
+  - id: overview
+    title: Mixed Martial Arts Overview
+    file: index.md
+    type: page

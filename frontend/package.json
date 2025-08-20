@@ -10,7 +10,9 @@
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d dist"
+    "deploy": "gh-pages -d dist",
+    "create-textbook": "node scripts/create-textbook.js",
+    "create-textbook-advanced": "node scripts/create-textbook-advanced.js"
   },
   "dependencies": {
     "@srfoster/one-backend-react": "^1.2.1",

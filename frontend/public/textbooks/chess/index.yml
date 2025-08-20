@@ -1,0 +1,12 @@
+title: ♟️ Chess
+description: ...
+config:
+  authors:
+    - Stephen R. Foster
+  version: "1.0"
+
+chapters:
+  - id: overview
+    title: Chess
+    file: index.md
+    type: page

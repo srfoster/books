@@ -2,12 +2,27 @@ import { Textbook } from '../types'
 
 // Configuration for available textbooks - only the minimal info needed
 const TEXTBOOK_CONFIGS = [
-  { id: 'education_systems', path: 'education_systems' },
+{ id: 'education_systems', path: 'education_systems' },
   { id: 'ai_ml', path: 'ai_ml' },
   { id: 'math', path: 'math' },
-  { id: 'stoicism', path: 'stoicism' },
+  { id: 'coding_is_dead', path: 'coding_is_dead' },
   { id: 'history', path: 'history' },
+
+  { id: 'science', path: 'science' },
+  { id: 'new_age_mysticism_and_religion', path: 'new_age_mysticism_and_religion' },
+
+  { id: 'spanish', path: 'spanish' },
+
+  { id: 'stoicism', path: 'stoicism' },
+
+  { id: 'music', path: 'music' },
+  { id: 'drawing', path: 'drawing' },
+
+  { id: 'mixed_martial_arts', path: 'mixed_martial_arts' },
+  { id: 'chess', path: 'chess' },
+  { id: 'starcraft_2', path: 'starcraft_2' },
 ]
+
 
 /**
  * Load textbook metadata from index.yml file
