@@ -1,5 +1,9 @@
 # Textbook App
 
+TODO:
+
+* Progress page bug: "Continue Reading" buttons not working
+
 A React-based web application for serving and viewing textbooks authored in markdown format.
 
 ## Features
