@@ -12,6 +12,7 @@ export interface Textbook {
   description: string
   path: string
   chapters: Chapter[]
+  coming_soon?: boolean
   config?: {
     authors?: string[]
     version?: string

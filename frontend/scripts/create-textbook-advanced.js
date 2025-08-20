@@ -208,7 +208,7 @@ Ready to begin? ${withChapters ? 'Start with Chapter 1: Introduction!' : 'Dive i
   const existingConfigs = configsMatch[2];
 
   if (!existingConfigs.includes(`'${sanitizedName}'`)) {
-    const newConfig = `  { id: '${sanitizedName}', path: '${sanitizedName}' },`;
+    const newConfig = `  { id: '${sanitizedName}', path: '${sanitizedName}', coming_soon: true },`;
     const updatedConfigs = existingConfigs.trim() + '\n' + newConfig + '\n';
     
     const updatedContent = serviceContent.replace(
@@ -217,12 +217,12 @@ Ready to begin? ${withChapters ? 'Start with Chapter 1: Introduction!' : 'Dive i
     );
     
     fs.writeFileSync(serviceFile, updatedContent);
-    console.log(`🔧 Updated textbookService.ts`);
+    console.log(`🔧 Updated textbookService.ts (marked as coming soon)`);
   }
 
   console.log(`\n✅ Successfully created ${withChapters ? 'advanced ' : ''}textbook "${displayName}"!`);
   console.log(`\n📍 Location: ${textbookDir}`);
-  console.log(`🌐 URL: http://localhost:5173/#/textbook/${sanitizedName}`);
+  console.log(`🌐 URL: http://localhost:5173/#/textbook/${sanitizedName} (coming soon)`);
   
   if (withChapters) {
     console.log(`📚 Created with ${chaptersContent.length} sample chapters`);

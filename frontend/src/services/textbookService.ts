@@ -6,21 +6,21 @@ const TEXTBOOK_CONFIGS = [
   { id: 'ai_ml', path: 'ai_ml' },
   { id: 'math', path: 'math' },
   { id: 'coding_is_dead', path: 'coding_is_dead' },
-  { id: 'history', path: 'history' },
+  { id: 'history', path: 'history', coming_soon: true },
 
-  { id: 'science', path: 'science' },
-  { id: 'new_age_mysticism_and_religion', path: 'new_age_mysticism_and_religion' },
+  { id: 'science', path: 'science', coming_soon: true },
+  { id: 'new_age_mysticism_and_religion', path: 'new_age_mysticism_and_religion', coming_soon: true },
 
-  { id: 'spanish', path: 'spanish' },
+  { id: 'spanish', path: 'spanish', coming_soon: true },
 
-  { id: 'stoicism', path: 'stoicism' },
+  { id: 'stoicism', path: 'stoicism', coming_soon: true },
 
-  { id: 'music', path: 'music' },
-  { id: 'drawing', path: 'drawing' },
+  { id: 'music', path: 'music', coming_soon: true },
+  { id: 'drawing', path: 'drawing', coming_soon: true },
 
-  { id: 'mixed_martial_arts', path: 'mixed_martial_arts' },
-  { id: 'chess', path: 'chess' },
-  { id: 'starcraft_2', path: 'starcraft_2' },
+  { id: 'mixed_martial_arts', path: 'mixed_martial_arts', coming_soon: true },
+  { id: 'chess', path: 'chess', coming_soon: true },
+  { id: 'starcraft_2', path: 'starcraft_2', coming_soon: true },
 ]
 
 
@@ -29,6 +29,10 @@ const TEXTBOOK_CONFIGS = [
  */
 export const loadTextbookMetadata = async (path: string): Promise<Textbook | null> => {
   try {
+    // Find the config for this textbook to check for coming_soon flag
+    const config = TEXTBOOK_CONFIGS.find(c => c.path === path)
+    const isComingSoon = config?.coming_soon || false
+    
     const response = await fetch(`/textbooks/${path}/index.yml`)
     if (!response.ok) {
       console.warn(`No index.yml found for textbook: ${path} (${response.status})`)
@@ -41,7 +45,8 @@ export const loadTextbookMetadata = async (path: string): Promise<Textbook | nul
     const textbook = {
       ...metadata,
       id: path,
-      path
+      path,
+      coming_soon: isComingSoon
     } as Textbook
     
     return textbook

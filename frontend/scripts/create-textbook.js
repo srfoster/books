@@ -107,7 +107,7 @@ Begin your journey by exploring the chapters in the navigation sidebar. Each cha
     console.log(`⚠️  Textbook "${sanitizedName}" is already registered in textbookService.ts`);
   } else {
     // Add new textbook config before the closing bracket
-    const newConfig = `  { id: '${sanitizedName}', path: '${sanitizedName}' },`;
+    const newConfig = `  { id: '${sanitizedName}', path: '${sanitizedName}', coming_soon: true },`;
     const updatedConfigs = existingConfigs.trim() + '\n' + newConfig + '\n';
     
     const updatedContent = serviceContent.replace(
@@ -116,17 +116,18 @@ Begin your journey by exploring the chapters in the navigation sidebar. Each cha
     );
     
     fs.writeFileSync(serviceFile, updatedContent);
-    console.log(`🔧 Updated textbookService.ts to include "${sanitizedName}"`);
+    console.log(`🔧 Updated textbookService.ts to include "${sanitizedName}" (marked as coming soon)`);
   }
 
   console.log(`\n✅ Successfully created textbook "${displayName}"!`);
   console.log(`\n📍 Location: ${textbookDir}`);
-  console.log(`🌐 URL: http://localhost:5173/#/textbook/${sanitizedName}`);
+  console.log(`🌐 URL: http://localhost:5173/#/textbook/${sanitizedName} (coming soon)`);
   console.log(`\n📝 Next steps:`);
   console.log(`   1. Edit ${path.join(textbookDir, 'index.yml')} to customize metadata`);
   console.log(`   2. Edit ${path.join(textbookDir, 'index.md')} to add content`);
   console.log(`   3. Add additional chapters and sections as needed`);
-  console.log(`   4. Start the dev server: npm run dev`);
+  console.log(`   4. Remove 'coming_soon: true' from textbookService.ts when ready`);
+  console.log(`   5. Start the dev server: npm run dev`);
 
 } catch (error) {
   console.error(`❌ Error creating textbook: ${error.message}`);
