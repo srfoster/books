@@ -3,6 +3,9 @@
 <<TODO:
 
 * Stop thinking of yourself as one human body, but rather as an organization.  The "Self++"
+* Language acquisition theory is more important than ever
+* Reading is more important than writing
+* "AI is a multiplier" theory is not quite right.  0 * x should be 0, but AI can take people from zero to ___.
 
 >>
 
