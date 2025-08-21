@@ -1,5 +1,11 @@
 # Coding Is Dead
 
+<<TODO:
+
+* Stop thinking of yourself as one human body, but rather as an organization.  The "Self++"
+
+>>
+
 Welcome to the Coding Is Dead textbook!
 
 ## Introduction
