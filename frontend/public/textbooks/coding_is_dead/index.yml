@@ -1,12 +1,17 @@
 title: 💀 Coding Is Dead
-description: A comprehensive guide to coding and computer science in the age of AI
+description: The art of learning coding and computer science in the age of AI
 config:
   authors:
-    - Your Name
+    - Stephen R. Foster
   version: "1.0"
 
 chapters:
   - id: overview
-    title: Coding Is Dead Overview
+    title: Overview
     file: index.md
     type: page
+  - id: bibliography
+    title: Bibliography
+    file: bib.md
+    type: page
+

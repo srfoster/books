@@ -9,12 +9,24 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 // Get the textbook name from command line arguments
-const textbookName = process.argv[2];
+const args = process.argv.slice(2);
+const textbookName = args[0];
+const statusFlag = args[1]; // 'coming-soon' or 'under-construction'
 
 if (!textbookName) {
   console.error('❌ Error: Please provide a textbook name');
-  console.log('Usage: npm run create-textbook <textbook-name>');
+  console.log('Usage: npm run create-textbook <textbook-name> [status]');
   console.log('Example: npm run create-textbook programming');
+  console.log('Example: npm run create-textbook programming coming-soon');
+  console.log('Example: npm run create-textbook programming under-construction');
+  process.exit(1);
+}
+
+// Validate status flag
+const validFlags = ['coming-soon', 'under-construction'];
+if (statusFlag && !validFlags.includes(statusFlag)) {
+  console.error(`❌ Error: Invalid status flag "${statusFlag}"`);
+  console.log(`Valid options: ${validFlags.join(', ')}`);
   process.exit(1);
 }
 
@@ -107,7 +119,17 @@ Begin your journey by exploring the chapters in the navigation sidebar. Each cha
     console.log(`⚠️  Textbook "${sanitizedName}" is already registered in textbookService.ts`);
   } else {
     // Add new textbook config before the closing bracket
-    const newConfig = `  { id: '${sanitizedName}', path: '${sanitizedName}', coming_soon: true },`;
+    let configFlags = '';
+    if (statusFlag === 'coming-soon') {
+      configFlags = ', coming_soon: true';
+    } else if (statusFlag === 'under-construction') {
+      configFlags = ', under_construction: true';
+    } else {
+      // Default to coming soon if no flag specified
+      configFlags = ', coming_soon: true';
+    }
+    
+    const newConfig = `  { id: '${sanitizedName}', path: '${sanitizedName}'${configFlags} },`;
     const updatedConfigs = existingConfigs.trim() + '\n' + newConfig + '\n';
     
     const updatedContent = serviceContent.replace(
@@ -116,17 +138,24 @@ Begin your journey by exploring the chapters in the navigation sidebar. Each cha
     );
     
     fs.writeFileSync(serviceFile, updatedContent);
-    console.log(`🔧 Updated textbookService.ts to include "${sanitizedName}" (marked as coming soon)`);
+    const statusText = statusFlag === 'under-construction' ? 'under construction' : 'coming soon';
+    console.log(`🔧 Updated textbookService.ts to include "${sanitizedName}" (marked as ${statusText})`);
   }
 
   console.log(`\n✅ Successfully created textbook "${displayName}"!`);
   console.log(`\n📍 Location: ${textbookDir}`);
-  console.log(`🌐 URL: http://localhost:5173/#/textbook/${sanitizedName} (coming soon)`);
+  const statusText = statusFlag === 'under-construction' ? 'under construction' : 'coming soon';
+  const urlNote = statusFlag === 'under-construction' ? 'under construction' : 'coming soon';
+  console.log(`🌐 URL: http://localhost:5173/#/textbook/${sanitizedName} (${urlNote})`);
   console.log(`\n📝 Next steps:`);
   console.log(`   1. Edit ${path.join(textbookDir, 'index.yml')} to customize metadata`);
   console.log(`   2. Edit ${path.join(textbookDir, 'index.md')} to add content`);
   console.log(`   3. Add additional chapters and sections as needed`);
-  console.log(`   4. Remove 'coming_soon: true' from textbookService.ts when ready`);
+  if (statusFlag === 'under-construction') {
+    console.log(`   4. Remove 'under_construction: true' from textbookService.ts when ready`);
+  } else {
+    console.log(`   4. Remove 'coming_soon: true' from textbookService.ts when ready`);
+  }
   console.log(`   5. Start the dev server: npm run dev`);
 
 } catch (error) {

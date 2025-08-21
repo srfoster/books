@@ -20,3 +20,7 @@ chapters:
         title: Story Time
         file: chapters/01-defining-education/01-story-1.md
         type: section
+  - id: bib
+    title: Bibliography 
+    file: bib.md
+    type: page

@@ -13,6 +13,7 @@ export interface Textbook {
   path: string
   chapters: Chapter[]
   coming_soon?: boolean
+  under_construction?: boolean
   config?: {
     authors?: string[]
     version?: string

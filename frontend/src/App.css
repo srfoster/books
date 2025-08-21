@@ -163,6 +163,20 @@
   letter-spacing: 0.5px;
 }
 
+.under-construction-badge {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+  background: #ffa500;
+  color: white;
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+  font-size: 0.75rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
 /* Navigation styles */
 .navigation {
   background-color: #1a1a1a;

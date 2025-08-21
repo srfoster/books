@@ -2,10 +2,10 @@ import { Textbook } from '../types'
 
 // Configuration for available textbooks - only the minimal info needed
 const TEXTBOOK_CONFIGS = [
-{ id: 'education_systems', path: 'education_systems' },
-  { id: 'ai_ml', path: 'ai_ml' },
-  { id: 'math', path: 'math' },
-  { id: 'coding_is_dead', path: 'coding_is_dead' },
+{ id: 'education_systems', path: 'education_systems', under_construction: true },
+  { id: 'ai_ml', path: 'ai_ml', under_construction: true },
+  { id: 'math', path: 'math', under_construction: true },
+  { id: 'coding_is_dead', path: 'coding_is_dead', under_construction: true },
   { id: 'history', path: 'history', coming_soon: true },
 
   { id: 'science', path: 'science', coming_soon: true },
@@ -29,9 +29,10 @@ const TEXTBOOK_CONFIGS = [
  */
 export const loadTextbookMetadata = async (path: string): Promise<Textbook | null> => {
   try {
-    // Find the config for this textbook to check for coming_soon flag
+    // Find the config for this textbook to check for coming_soon and under_construction flags
     const config = TEXTBOOK_CONFIGS.find(c => c.path === path)
     const isComingSoon = config?.coming_soon || false
+    const isUnderConstruction = config?.under_construction || false
     
     const response = await fetch(`/textbooks/${path}/index.yml`)
     if (!response.ok) {
@@ -46,7 +47,8 @@ export const loadTextbookMetadata = async (path: string): Promise<Textbook | nul
       ...metadata,
       id: path,
       path,
-      coming_soon: isComingSoon
+      coming_soon: isComingSoon,
+      under_construction: isUnderConstruction
     } as Textbook
     
     return textbook

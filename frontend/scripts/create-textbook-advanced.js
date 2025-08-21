@@ -9,13 +9,26 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 // Get arguments
-const textbookName = process.argv[2];
-const withChapters = process.argv.includes('--with-chapters') || process.argv.includes('-c');
+const args = process.argv.slice(2);
+const textbookName = args[0];
+const withChapters = args.includes('--with-chapters') || args.includes('-c');
+const statusFlagArg = args.find(arg => arg.startsWith('--status='));
+const statusFlag = statusFlagArg ? statusFlagArg.split('=')[1] : null;
 
 if (!textbookName) {
   console.error('❌ Error: Please provide a textbook name');
-  console.log('Usage: npm run create-textbook-advanced <textbook-name> [--with-chapters]');
+  console.log('Usage: npm run create-textbook-advanced <textbook-name> [--with-chapters] [--status=<status>]');
   console.log('Example: npm run create-textbook-advanced "Data Science" --with-chapters');
+  console.log('Example: npm run create-textbook-advanced "Programming" --status=under-construction');
+  console.log('Status options: coming-soon, under-construction');
+  process.exit(1);
+}
+
+// Validate status flag
+const validFlags = ['coming-soon', 'under-construction'];
+if (statusFlag && !validFlags.includes(statusFlag)) {
+  console.error(`❌ Error: Invalid status flag "${statusFlag}"`);
+  console.log(`Valid options: ${validFlags.join(', ')}`);
   process.exit(1);
 }
 
@@ -208,7 +221,18 @@ Ready to begin? ${withChapters ? 'Start with Chapter 1: Introduction!' : 'Dive i
   const existingConfigs = configsMatch[2];
 
   if (!existingConfigs.includes(`'${sanitizedName}'`)) {
-    const newConfig = `  { id: '${sanitizedName}', path: '${sanitizedName}', coming_soon: true },`;
+    // Add new textbook config before the closing bracket
+    let configFlags = '';
+    if (statusFlag === 'coming-soon') {
+      configFlags = ', coming_soon: true';
+    } else if (statusFlag === 'under-construction') {
+      configFlags = ', under_construction: true';
+    } else {
+      // Default to coming soon if no flag specified
+      configFlags = ', coming_soon: true';
+    }
+    
+    const newConfig = `  { id: '${sanitizedName}', path: '${sanitizedName}'${configFlags} },`;
     const updatedConfigs = existingConfigs.trim() + '\n' + newConfig + '\n';
     
     const updatedContent = serviceContent.replace(
@@ -217,12 +241,14 @@ Ready to begin? ${withChapters ? 'Start with Chapter 1: Introduction!' : 'Dive i
     );
     
     fs.writeFileSync(serviceFile, updatedContent);
-    console.log(`🔧 Updated textbookService.ts (marked as coming soon)`);
+    const statusText = statusFlag === 'under-construction' ? 'under construction' : 'coming soon';
+    console.log(`🔧 Updated textbookService.ts (marked as ${statusText})`);
   }
 
   console.log(`\n✅ Successfully created ${withChapters ? 'advanced ' : ''}textbook "${displayName}"!`);
   console.log(`\n📍 Location: ${textbookDir}`);
-  console.log(`🌐 URL: http://localhost:5173/#/textbook/${sanitizedName} (coming soon)`);
+  const statusText = statusFlag === 'under-construction' ? 'under construction' : 'coming soon';
+  console.log(`🌐 URL: http://localhost:5173/#/textbook/${sanitizedName} (${statusText})`);
   
   if (withChapters) {
     console.log(`📚 Created with ${chaptersContent.length} sample chapters`);

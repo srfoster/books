@@ -38,6 +38,9 @@ const TextbookList = ({ textbooks }: TextbookListProps) => {
               {textbook.coming_soon && (
                 <div className="coming-soon-badge">Coming Soon</div>
               )}
+              {textbook.under_construction && (
+                <div className="under-construction-badge">Under Construction</div>
+              )}
               <br/>
               {textbook.chapters.length > 0 && (
                 <small>{textbook.chapters.length} chapters available</small>
