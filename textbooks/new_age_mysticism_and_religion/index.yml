@@ -1,0 +1,12 @@
+title: 🙏 Religion and Spirituality
+description: A comprehensive guide to faith systems
+config:
+  authors:
+    - Your Name
+  version: "1.0"
+
+chapters:
+  - id: overview
+    title: Religion and Spirituality
+    file: index.md
+    type: page

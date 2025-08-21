@@ -1,0 +1,12 @@
+title: 🎵 Music
+description: ...
+config:
+  authors:
+    - Stephen R. Foster
+  version: "1.0"
+
+chapters:
+  - id: overview
+    title: Music
+    file: index.md
+    type: page

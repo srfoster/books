@@ -1,0 +1,12 @@
+title: 🎨 Drawing
+description: A comprehensive guide to drawing
+config:
+  authors:
+    - Your Name
+  version: "1.0"
+
+chapters:
+  - id: overview
+    title: Drawing Overview
+    file: index.md
+    type: page

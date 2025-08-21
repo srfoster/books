@@ -1,0 +1,26 @@
+title: 📐 Why Mathematics?
+description: A mathematics textbook for skeptics
+config:
+  authors:
+    - Stephen R. Foster
+  version: "1.0"
+
+chapters:
+  - id: overview
+    title: Mathematics Overview
+    file: index.md
+    type: page
+    
+  - id: algebra
+    title: "Chapter 1: Algebra"
+    file: chapters/01-algebra/index.md
+    type: chapter
+    children:
+      - id: linear-equations
+        title: Linear Equations
+        file: chapters/01-algebra/01-linear-equations.md
+        type: section
+      - id: quadratic-functions
+        title: Quadratic Functions
+        file: chapters/01-algebra/02-quadratic-functions.md
+        type: section

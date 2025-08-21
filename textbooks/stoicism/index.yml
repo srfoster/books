@@ -1,0 +1,22 @@
+title: 🏛️ Stoicism
+description: Philosophy and principles of Stoicism
+config:
+  authors:
+    - Philosophy Department
+  version: "1.0"
+
+chapters:
+  - id: overview
+    title: Introduction to Stoicism
+    file: index.md
+    type: page
+    
+  - id: main
+    title: Main Concepts
+    file: main.md
+    type: page
+    
+  - id: related
+    title: Related Topics
+    file: related.md
+    type: page

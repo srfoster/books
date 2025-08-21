@@ -1,0 +1,35 @@
+title: 🤖 Artificial Intelligence
+description: AI, machine learning, data science, and language models. Learn it before it learns you.
+config:
+  authors:
+    - Stephen R. Foster
+  version: "1.0"
+
+chapters:
+  - id: introduction
+    title: Introduction
+    file: index.md
+    type: chapter
+    children:
+      - id: what-to-expect
+        title: What to Expect
+        file: chapters/00-intro/01-what-to-expect.md
+        type: section
+      - id: chapter-overviews
+        title: Chapter Overviews
+        file: chapters/00-intro/02-chapter-overviews.md
+        type: section
+  - id: chapter-1
+    title: "Chapter 1: Is AI Yours or Theirs?"
+    file: chapters/01-ai-and-you/index.md
+    type: chapter
+    children:
+      - id: hello-world
+        title: Hello World
+        file: chapters/01-ai-and-you/01-hello-world.md
+        type: section
+
+  - id: bib
+    title: Bibliography
+    file: bib.md
+    type: page

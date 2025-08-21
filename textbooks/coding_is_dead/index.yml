@@ -1,0 +1,17 @@
+title: 💀 Coding Is Dead
+description: The art of learning coding and computer science in the age of AI
+config:
+  authors:
+    - Stephen R. Foster
+  version: "1.0"
+
+chapters:
+  - id: overview
+    title: Overview
+    file: index.md
+    type: page
+  - id: bibliography
+    title: Bibliography
+    file: bib.md
+    type: page
+

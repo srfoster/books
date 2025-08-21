@@ -1,0 +1,12 @@
+title: 🇪🇸 Spanish
+description: A comprehensive guide to spanish
+config:
+  authors:
+    - Your Name
+  version: "1.0"
+
+chapters:
+  - id: overview
+    title: Spanish Overview
+    file: index.md
+    type: page

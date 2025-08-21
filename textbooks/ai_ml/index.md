@@ -1,30 +1,13 @@
-# Artificial Intelligence & Machine Learning
+# Artificial Intelligence 
 
-Welcome to the comprehensive guide on AI and Machine Learning concepts, techniques, and applications.
+> Learn AI before it learns you ~ChatGPT
 
-## Course Overview
+## Introduction
 
-This textbook covers fundamental concepts in artificial intelligence and machine learning, from basic principles to advanced techniques. Whether you're a beginner or looking to deepen your understanding, this guide will take you through the essential topics.
+I began writing this textbook because I could find no other such resource that I considered ambitious enough.  In my experience, the texts written for beginners do a shallow job, and the more advanced ones assume too much prior knowledge on the part of the reader.
 
-## What You'll Learn
+With this book, we'll cover the basic principles and advanced techniques of artificial intelligence, machine learning, data science, and language models.  I am currently using this book in my own classes, with students who are pursuing bachelor-level coursework in computer science, computer information systems, and organizational leadership.
 
-- **Foundations of AI**: Understanding what artificial intelligence is and its historical development
-- **Machine Learning Basics**: Core concepts, algorithms, and methodologies
-- **Neural Networks**: From perceptrons to deep learning architectures
-- **Natural Language Processing**: How machines understand and generate human language
-- **Computer Vision**: Teaching machines to see and interpret visual data
-- **Ethics in AI**: Responsible AI development and deployment
+The only prerequisite knowledge I'll assume on your part is that which is often categorized under "basic computer skills."  For example, I'll assume that you know how to install software, manage your files and folders, and that you know how to use the internet to help you when you get stuck.  I'll also assume that you've used generative AI before and that you now want to understand how it works at a level of depth that enables you to do things with AI that others cannot. 
 
-## Prerequisites
-
-- Basic programming knowledge (Python recommended)
-- High school level mathematics (algebra, basic statistics)
-- Curiosity and willingness to learn!
-
-## Getting Started
-
-This textbook is designed to be read sequentially, with each chapter building upon the previous ones. However, experienced readers may jump to specific topics of interest.
-
----
-
-*Start your journey into the fascinating world of artificial intelligence and machine learning!*
+With that said, I should mention that I would only recommend this book to readers with a growth mindset about programming and mathematics.  I won't expect you to know Python nor linear algebra, but you should be willing (ideally excited!) to learn.  Because we'll be covering these topics and more. 

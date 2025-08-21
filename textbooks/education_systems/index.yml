@@ -1,0 +1,26 @@
+title: 💔 Why School Sucks
+description: The horrifying past, present, and future of the American education system
+config:
+  authors:
+    - Stephen R. Foster
+  version: "1.0"
+
+chapters:
+  - id: overview
+    title: Introduction 
+    file: index.md
+    type: page
+
+  - id: defining-education
+    title: "Chapter 1: Education's Defining Moment"
+    file: chapters/01-defining-education/index.md
+    type: chapter
+    children:
+      - id: story-1
+        title: Story Time
+        file: chapters/01-defining-education/01-story-1.md
+        type: section
+  - id: bib
+    title: Bibliography 
+    file: bib.md
+    type: page
