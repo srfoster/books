@@ -26,6 +26,63 @@ const findChapterById = (chapters: Chapter[], chapterId: string): Chapter | null
   return null
 }
 
+// Helper function to flatten chapter structure for sequential navigation
+const flattenChapters = (chapters: Chapter[], parentPath: string = ''): Array<{chapter: Chapter, path: string}> => {
+  const flattened: Array<{chapter: Chapter, path: string}> = []
+  
+  chapters.forEach(chapter => {
+    const currentPath = parentPath ? `${parentPath}/${chapter.id}` : chapter.id
+    flattened.push({ chapter, path: currentPath })
+    
+    if (chapter.children) {
+      flattened.push(...flattenChapters(chapter.children, currentPath))
+    }
+  })
+  
+  return flattened
+}
+
+// Helper function to get navigation links
+const getNavigationLinks = (chapters: Chapter[], currentPath: string) => {
+  const flattened = flattenChapters(chapters)
+  const currentIndex = flattened.findIndex(item => item.path === currentPath)
+  
+  if (currentIndex === -1) return { prev: null, next: null }
+  
+  const prev = currentIndex > 0 ? flattened[currentIndex - 1] : null
+  const next = currentIndex < flattened.length - 1 ? flattened[currentIndex + 1] : null
+  
+  return { prev, next }
+}
+
+// Navigation component
+const ChapterNavigation = ({ textbookId, prev, next }: {
+  textbookId: string
+  prev: {chapter: Chapter, path: string} | null
+  next: {chapter: Chapter, path: string} | null
+}) => {
+  if (!prev && !next) return null
+  
+  return (
+    <div className="chapter-navigation">
+      <div className="nav-links">
+        {prev && (
+          <Link to={`/textbook/${textbookId}/${prev.path}`} className="nav-link prev">
+            <span className="nav-direction">← Previous</span>
+            <span className="nav-title">{prev.chapter.title}</span>
+          </Link>
+        )}
+        {next && (
+          <Link to={`/textbook/${textbookId}/${next.path}`} className="nav-link next">
+            <span className="nav-direction">Next →</span>
+            <span className="nav-title">{next.chapter.title}</span>
+          </Link>
+        )}
+      </div>
+    </div>
+  )
+}
+
 // Component to render navigation tree
 const NavigationTree = ({ chapters, textbookId, currentChapterId, level = 0, parentChapterId }: {
   chapters: Chapter[]
@@ -77,17 +134,29 @@ const TextbookViewer = ({ textbooks }: TextbookViewerProps) => {
   
   // Find the current item to display - could be a chapter or a section
   let currentItem: Chapter | null = null
+  let currentPath = ''
 
   if (section) {
     // If we have a section, find it within the chapter
     const parentChapter = chapter ? findChapterById(textbook?.chapters || [], chapter) : null
     if (parentChapter?.children) {
       currentItem = findChapterById(parentChapter.children, section)
+      currentPath = `${chapter}/${section}`
     }
   } else if (chapter) {
     // If we just have a chapter, find it
     currentItem = findChapterById(textbook?.chapters || [], chapter)
+    currentPath = chapter
+  } else {
+    // We're viewing the main textbook page - find the first chapter
+    if (textbook?.chapters && textbook.chapters.length > 0) {
+      const firstChapter = textbook.chapters[0]
+      currentPath = firstChapter.id
+    }
   }
+
+  // Get navigation links
+  const navigation = textbook ? getNavigationLinks(textbook.chapters, currentPath) : { prev: null, next: null }
 
   useEffect(() => {
     const loadContent = async () => {
@@ -149,14 +218,21 @@ const TextbookViewer = ({ textbooks }: TextbookViewerProps) => {
         {loading ? (
           <p>Loading content...</p>
         ) : (
-          <div className="markdown-content">
-            <ReactMarkdown
-              remarkPlugins={[remarkGfm, remarkMath]}
-              rehypePlugins={[rehypeKatex]}
-            >
-              {content}
-            </ReactMarkdown>
-          </div>
+          <>
+            <div className="markdown-content">
+              <ReactMarkdown
+                remarkPlugins={[remarkGfm, remarkMath]}
+                rehypePlugins={[rehypeKatex]}
+              >
+                {content}
+              </ReactMarkdown>
+            </div>
+            <ChapterNavigation 
+              textbookId={textbook.id}
+              prev={navigation.prev}
+              next={navigation.next}
+            />
+          </>
         )}
       </div>
     </div>
