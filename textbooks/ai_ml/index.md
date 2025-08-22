@@ -1,3 +1,10 @@
+
+TODO:
+
+* Deployed site is broken
+
+
+
 # Artificial Intelligence 
 
 > Learn AI before it learns you ~ChatGPT
