@@ -1,6 +1,10 @@
-# Chapter 1: Is AI Yours (or "Theirs")?
+# Chapter 1: Is AI Yours (or Theirs)?
 
-In this chapter, I hope to bring about a cognitive shift -- one that I myself had to make circa 2022 with the release of ChatGPT.  
+In this chapter, I hope to help you achieve a cognitive shift -- one that I myself had to make circa 2022 just after the release of ChatGPT.  By the end of the chapter, I hope you'll realize that AI doesn't have to be something owned by "them" -- that a future in which this technology has been democratized is ___
+
+Prometheus
+
+
 
 ## Learning Objectives
 
