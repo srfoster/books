@@ -1,5 +1,5 @@
 title: 🤖 Artificial Intelligence
-description: AI, machine learning, data science, and language models. Learn it before it learns you.
+description: AI, machine learning, data science, and language models. Master it before it masters you.
 config:
   authors:
     - Stephen R. Foster
@@ -21,7 +21,7 @@ chapters:
         type: section
   - id: chapter-1
     title: "Chapter 1: Is AI Yours or Theirs?"
-    file: chapters/01-ai-and-you/index.md
+    file: chapters/01-ai-and-you/00-intro.md
     type: chapter
     children:
       - id: hello-world
