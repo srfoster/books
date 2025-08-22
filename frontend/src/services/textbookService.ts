@@ -3,10 +3,10 @@ import * as yaml from 'js-yaml'
 
 // Configuration for available textbooks - only the minimal info needed
 const TEXTBOOK_CONFIGS = [
-{ id: 'education_systems', path: 'education_systems' },
+  { id: 'education_systems', path: 'education_systems', under_construction: true },
   { id: 'ai_ml', path: 'ai_ml', under_construction: true },
-  { id: 'math', path: 'math' },
-  { id: 'coding_is_dead', path: 'coding_is_dead' },
+  { id: 'math', path: 'math', under_construction: true },
+  { id: 'coding_is_dead', path: 'coding_is_dead' , under_construction: true },
   { id: 'history', path: 'history', coming_soon: true },
 
   { id: 'science', path: 'science', coming_soon: true },
@@ -35,7 +35,9 @@ export const loadTextbookMetadata = async (path: string): Promise<Textbook | nul
     const isComingSoon = config?.coming_soon || false
     const isUnderConstruction = config?.under_construction || false
     
-    const response = await fetch(`/textbooks/${path}/index.yml`)
+    // Use different base paths for development vs production
+    const basePath = window.location.hostname === 'localhost' ? '' : '/books'
+    const response = await fetch(`${basePath}/textbooks/${path}/index.yml`)
     if (!response.ok) {
       console.warn(`No index.yml found for textbook: ${path} (${response.status})`)
       return null
