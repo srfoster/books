@@ -1,6 +1,6 @@
 # Is AI Yours or Theirs?
 
-In this chapter, I hope to help you achieve a shift in how you relate to AI -- a shift that myself and many of my colleagues have been making since ChatGPT was released in 2022.  In short: I want to empower you to call generative AI "*yours*".
+In this chapter, I hope to help you achieve a shift in how you relate to AI.  In short: I want to empower you to call generative AI "*yours*".
 
 <img src="/textbooks/ai_ml/chapters/01-ai-and-you/prometheus.png" alt="Prometheus" style="max-width: 500px; width: 100%; height: auto; display: block; margin: 20px auto;"/>
 
