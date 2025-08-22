@@ -12,4 +12,8 @@ The only prerequisite knowledge I'll assume on your part is that which is I call
 
 Our focus will be on how AI works and how you can make it do new things.  I believe anyone, regardless of background, can learn enough to help shape the AI revolution that's already underway.  However (and I know it may sound cheesy) you need to believe in yourself.
 
-Modern AI didn't come out of thin air.  Rather, it's the result of decades of hard work, key discoveries, and creative refinements across a great many disciplines.  There's a lot to learn, and although I don't assume much prerequisite technical knowledge, I do assume a prerequisite *mindset*, namely a strong growth mindset about computer science and mathematics.  In other words, I don't expect you to know about Python, linear algebra, statistics, or neural networks when you start, but my hope is that you will know a great deal about all of these and more by the end.
+Modern AI didn't come out of thin air.  Rather, it's the result of decades of hard work, key discoveries, and creative refinements across a great many disciplines.  There's a lot to learn, and although I don't assume much prerequisite technical knowledge, I do assume a prerequisite *mindset*, namely:
+
+> A strong growth mindset about computer science and mathematics.
+
+In other words, I don't expect you to know about Python, linear algebra, statistics, or neural networks when you start, but my hope is that you are excited to know about all of these and more by the end.

@@ -34,7 +34,14 @@ export const loadMarkdownContent = async (textbookPath: string, fileName: string
     }
     
     const content = await response.text()
-    return content
+    
+    // Process the content to fix image paths for production
+    const processedContent = content.replace(
+      /src="\/textbooks\//g,
+      `src="${basePath}/textbooks/`
+    )
+    
+    return processedContent
     
   } catch (error) {
     console.error('Error loading markdown content:', error)
