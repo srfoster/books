@@ -3,10 +3,11 @@ import * as yaml from 'js-yaml'
 
 // Configuration for available textbooks - only the minimal info needed
 const TEXTBOOK_CONFIGS = [
-  { id: 'education_systems', path: 'education_systems', under_construction: true },
   { id: 'ai_ml', path: 'ai_ml', under_construction: true },
-  { id: 'math', path: 'math', under_construction: true },
   { id: 'coding_is_dead', path: 'coding_is_dead' , under_construction: true },
+  { id: 'education_systems', path: 'education_systems', under_construction: true },
+
+  { id: 'math', path: 'math', coming_soon: true },
   { id: 'history', path: 'history', coming_soon: true },
 
   { id: 'science', path: 'science', coming_soon: true },
