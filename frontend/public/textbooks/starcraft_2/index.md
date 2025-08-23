@@ -1,3 +1,11 @@
 # StarCraft 2
 
-Yep, just a textbook about SC2
+<!--
+
+* Sticking to a repertoire of builds
+* Mechanics (isolated or integrated?)
+* How to learn builds
+* How to evolve them
+* Replays and videos? 
+
+-->

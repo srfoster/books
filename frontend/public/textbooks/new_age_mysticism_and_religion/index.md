@@ -1,22 +1,8 @@
-# New Age Mysticism And Religion
+# Faith systems 
 
-Welcome to the New Age Mysticism And Religion textbook!
+<!-- 
 
-## Introduction
+* Positive thinking => Denial of error
+  - Self-correction requires acceptance of error
 
-This textbook covers the fundamentals of new age mysticism and religion, providing you with a comprehensive understanding of the subject.
-
-## What You'll Learn
-
-- Core concepts and principles
-- Practical applications
-- Advanced topics and techniques
-- Best practices and methodologies
-
-## Getting Started
-
-Begin your journey by exploring the chapters in the navigation sidebar. Each chapter builds upon the previous one, so we recommend following them in order.
-
----
-
-*Happy learning!*
+-->
