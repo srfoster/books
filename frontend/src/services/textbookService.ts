@@ -6,6 +6,7 @@ const TEXTBOOK_CONFIGS = [
   { id: 'ai_ml', path: 'ai_ml', under_construction: true },
   { id: 'coding_is_dead', path: 'coding_is_dead' , under_construction: true },
   { id: 'education_systems', path: 'education_systems', under_construction: true },
+  { id: 'chess', path: 'chess', under_construction: true },
 
   { id: 'math', path: 'math', coming_soon: true },
   { id: 'history', path: 'history', coming_soon: true },
@@ -21,7 +22,6 @@ const TEXTBOOK_CONFIGS = [
   { id: 'drawing', path: 'drawing', coming_soon: true },
 
   { id: 'mixed_martial_arts', path: 'mixed_martial_arts', coming_soon: true },
-  { id: 'chess', path: 'chess', coming_soon: true },
   { id: 'starcraft_2', path: 'starcraft_2', coming_soon: true },
 ]
 
