@@ -36,9 +36,7 @@ I go for the Bishop and White initiates some additional trades: **8. Na4 Nd4 9. 
 
 Again, I hope to answer such philosophical questions with more battles in the gladiatorial arena.
 
-This was the moment when I felt the opponent had made a true mistake: **12. Bg5 Qd6 13. Rfd1 Bd7 14. c3 O-O-O?**  I had to prove it, of course, but the decision to castle Queenside, *into* the potential energy of my Queen and Bishop battery, just smelled bad.  Unlike the previous judgments, however, I was able to acquire some concrete "proof" of my opponent's inaccurate play.
-
-I already wanted to play d4, and now it carries with it some extra sting (namely, the opportunity to clear my own e pawn out of the way): **15. d4 exd4 16. e5 Bc6 17. exd6 Bxf3**
+This was the moment when I felt the opponent had made a true mistake: **12. Bg5 Qd6 13. Rfd1 Bd7 14. c3 O-O-O?**  I had to prove it, of course, but the decision to castle Queenside, *into* the potential energy of my Queen and Bishop battery, just smelled bad.  I already wanted to play d4, and now it carries with it some extra sting (namely, the opportunity to clear my own e pawn out of the way): **15. d4 exd4 16. e5 Bc6 17. exd6 Bxf3**
 
 My next move is actually a blunder: **18. dxc7?**  As the engine points out, Rd5 is a key idea (attacking my Bishop on g5, which was invisible to me!), and I didn't see it at all.  I opted for this move thinking that it forced more trades.  My opponent luckily does oblige me in this regard, but I do wish that I had seen this.
 
