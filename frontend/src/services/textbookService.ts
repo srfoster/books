@@ -6,8 +6,8 @@ const TEXTBOOK_CONFIGS = [
   { id: 'ai_ml', path: 'ai_ml', under_construction: true },
   { id: 'coding_is_dead', path: 'coding_is_dead' , under_construction: true },
   { id: 'education_systems', path: 'education_systems', under_construction: true },
-  { id: 'chess', path: 'chess', under_construction: true },
 
+  { id: 'chess', path: 'chess', coming_soon: true },
   { id: 'math', path: 'math', coming_soon: true },
   { id: 'history', path: 'history', coming_soon: true },
 
