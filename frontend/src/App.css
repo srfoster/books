@@ -129,15 +129,22 @@
 /* Coming Soon styles */
 .textbook-card-coming-soon {
   opacity: 0.6;
-  cursor: not-allowed;
+  cursor: pointer !important;
   background-color: var(--hover-bg);
   border-style: dashed;
+  transition: all 0.3s ease;
 }
 
 .textbook-card-coming-soon:hover {
   transform: none;
   box-shadow: none;
   border-color: var(--border-color);
+}
+
+.textbook-card-coming-soon:active {
+  transform: scale(0.98);
+  opacity: 0.8;
+  border-color: var(--active-color);
 }
 
 .textbook-card-coming-soon h3 {
