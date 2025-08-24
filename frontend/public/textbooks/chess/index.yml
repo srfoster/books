@@ -1,5 +1,5 @@
-title: "♟️ The Caverns Within | A Journey in Darkness"
-description: On learning to play blindfold chess
+title: "♟️ A Journey in Darkness"
+description: An aphantasic's quest to master blindfold chess 
 config:
   authors:
     - Stephen R. Foster
@@ -11,7 +11,29 @@ chapters:
     file: index.md
     type: chapter
     children:
+      - id: game-1 
+        title: Game 1
+        file: 01-blindfold-ladder/01-game-1.md
+        type: section
+      - id: games-2-and-3
+        title: Games 2 and 3
+        file: 01-blindfold-ladder/02-games-2-and-3.md
+        type: section
+      - id: game-3
+        title: Game 4
+        file: 01-blindfold-ladder/03-game-4.md
+        type: section
+  - id: appendices
+    title: Appendices
+    file: index.md
+    type: chapter
+    children:
+      - id: model-games
+        title: Model Games
+        file: model-games.md 
+        type: section
       - id: older-games
         title: Older Games
         file: older-games.md 
         type: section
+
