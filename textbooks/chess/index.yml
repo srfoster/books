@@ -1,5 +1,5 @@
-title: ♟️ Chess
-description: On learning chess
+title: "♟️ The Caverns Within | A Journey in Darkness"
+description: On learning to play blindfold chess
 config:
   authors:
     - Stephen R. Foster
@@ -9,4 +9,9 @@ chapters:
   - id: overview
     title: Chess
     file: index.md
-    type: page
+    type: chapter
+    children:
+      - id: older-games
+        title: Older Games
+        file: older-games.md 
+        type: section
