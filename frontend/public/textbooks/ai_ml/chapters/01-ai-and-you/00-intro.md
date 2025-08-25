@@ -1,4 +1,4 @@
-# Is AI Yours or Theirs?
+# Is AI Yours Yet?
 
 In this chapter, I hope to help you achieve a shift in how you relate to AI.  In short: I want to empower you to call generative AI "*yours*".
 
@@ -22,6 +22,6 @@ By the end of this chapter, I hope that you'll know:
 - How to "ask" these models to generate text and/or images for you.
 - How to write programs that make these models do things they previously couldn't.
 
-And yes, I'm aware that we haven't even defined terms like "generative AI" and "AI model" yet.  We'll do a bit more of that in Chapter 2.  For now, please think of yourself as someone first learning to drive a car.  We'll define "internal combustion" after you've experienced the engine's vibrations, revved the gas, rolled down the window, and felt the wind on your face.
+And yes, I'm aware that we haven't even defined terms like "generative AI" and "AI model" yet, nor have we addressed the elephant in the room: "What exactly *is* AI?"  We'll do a bit more of that in Chapter 2 and throughout this book.  For now, please think of yourself as someone first learning to drive a car.  We'll define "internal combustion" and answer "What exactly *is* a car?" after you've revved the gas, rolled down the window, and felt the wind on your face. 
 
 [^1]: Perhaps one day, the general public will have access to the flagship proprietary models too (ChatGPT, Claude, and Grok).  Considering that 1) these models were trained in large part on public data (yours and that of your friends and family), and 2) the myriad innovations that made the training possible was funded over many decades by public tax dollars (yours and that of your family and friends), I think there's a compelling ethical argument that these world-shaping technologies should also be made public.  But I don't make the rules.
