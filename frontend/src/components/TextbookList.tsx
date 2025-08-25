@@ -64,7 +64,6 @@ const TextbookList = ({ textbooks }: TextbookListProps) => {
                   className="textbook-card textbook-card-coming-soon"
                   {...longPressEvents}
                   style={{ cursor: 'pointer' }}
-                  title="Long press to access"
                 >
                   {children}
                 </div>
@@ -90,16 +89,6 @@ const TextbookList = ({ textbooks }: TextbookListProps) => {
               )}
               {textbook.under_construction && (
                 <div className="under-construction-badge">Under Construction</div>
-              )}
-              {textbook.coming_soon && (
-                <div style={{ 
-                  fontSize: '0.8em', 
-                  color: '#666', 
-                  marginTop: '0.5rem',
-                  fontStyle: 'italic'
-                }}>
-                  💡 Long press to preview
-                </div>
               )}
               <br/>
               {textbook.chapters.length > 0 && (
