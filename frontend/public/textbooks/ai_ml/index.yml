@@ -45,7 +45,7 @@ chapters:
         file: chapters/01-ai-and-you/05-scaling-up.md
         type: section
       - id: conclusion
-        title: Well, Is It?
+        title: Well, Is It Yours Now?
         file: chapters/01-ai-and-you/06-well-is-it.md
         type: section
   - id: chapter-2

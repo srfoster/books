@@ -38,7 +38,9 @@ export const loadTextbookMetadata = async (path: string): Promise<Textbook | nul
     
     // Use different base paths for development vs production
     const basePath = window.location.hostname === 'localhost' ? '' : '/books'
-    const response = await fetch(`${basePath}/textbooks/${path}/index.yml`)
+    // Add cache busting query parameter to ensure fresh content
+    const cacheBuster = `?v=${Date.now()}`
+    const response = await fetch(`${basePath}/textbooks/${path}/index.yml${cacheBuster}`)
     if (!response.ok) {
       console.warn(`No index.yml found for textbook: ${path} (${response.status})`)
       return null
