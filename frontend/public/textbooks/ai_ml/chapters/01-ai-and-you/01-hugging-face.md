@@ -12,11 +12,18 @@ Overcoming these challenges early is a good thing.  In the exercises that follow
 
 **Overview.** This exercise is designed to introduce you to a key resource for AI developers, namely a website called **Hugging Face** (weird name, serious site): https://huggingface.co
 
-**Justification.**   
+**Justification.** Hugging Face is the GitHub of the AI world - it's where thousands of open-source AI models live, ready to be downloaded and used. Understanding how to navigate this ecosystem is essential for anyone who wants to work with AI models beyond the commercial APIs. Think of it as your first step toward AI independence.
 
-**Steps.**  [Go there, make an account, browse around, etc.]
+**Steps.**  
+1. Navigate to https://huggingface.co and create a free account
+2. Browse the "Models" section and explore different categories (Text Generation, Image Classification, etc.)
+3. Find and examine a text generation model like `microsoft/DialoGPT-medium`
+4. Look at the model card - read about what it does, how it was trained, and its limitations
+5. Try the "Inference API" widget on the model page to test it directly in your browser
+6. Browse the "Datasets" section to see what training data looks like
+7. Check out the "Spaces" section to see AI applications built by the community
 
-**Deliverable.** A screenshot of your Hugging Face ...
+**Deliverable.** A screenshot of you successfully running inference on a text generation model through the Hugging Face web interface, along with a brief (2-3 sentence) description of what the model does.
 
-**Discussion** 
+**Discussion.** What surprised you most about browsing Hugging Face? Did you find any models that solve problems you're personally interested in? The democratization of AI through platforms like this is unprecedented - just a few years ago, these capabilities were locked away in research labs and big tech companies. 
 

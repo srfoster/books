@@ -25,16 +25,28 @@ chapters:
     type: chapter
     children:
       - id: hugging-face
-        title: Hugging Face
+        title: 🛠 Hugging Face
         file: chapters/01-ai-and-you/01-hugging-face.md
         type: section
       - id: vs-code
-        title: VSCode 
+        title: 🛠 VSCode 
         file: chapters/01-ai-and-you/02-vs-code.md
         type: section
       - id: first-model
-        title: Our First Model 
+        title: 🛠 Our First Model 
         file: chapters/01-ai-and-you/03-our-first-model.md
+        type: section
+      - id: aws-setup
+        title: 🛠 AWS and Remote Development
+        file: chapters/01-ai-and-you/04-aws-setup.md
+        type: section
+      - id: scaling-up
+        title: 🛠 Scaling Up
+        file: chapters/01-ai-and-you/05-scaling-up.md
+        type: section
+      - id: conclusion
+        title: Well, Is It?
+        file: chapters/01-ai-and-you/06-well-is-it.md
         type: section
   - id: chapter-2
     title: "Chapter 2"
