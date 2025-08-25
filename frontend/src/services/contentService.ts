@@ -25,7 +25,9 @@ export const loadMarkdownContent = async (textbookPath: string, fileName: string
     // Construct the URL to fetch the markdown file from the public directory
     // Use different base paths for development vs production
     const basePath = window.location.hostname === 'localhost' ? '' : '/books'
-    const url = `${basePath}/textbooks/${textbookPath}/${fileName}`
+    // Add cache busting query parameter to ensure fresh content
+    const cacheBuster = `?v=${Date.now()}`
+    const url = `${basePath}/textbooks/${textbookPath}/${fileName}${cacheBuster}`
     
     const response = await fetch(url)
     
