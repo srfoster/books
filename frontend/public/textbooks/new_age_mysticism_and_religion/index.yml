@@ -10,3 +10,8 @@ chapters:
     title: Religion and Spirituality
     file: index.md
     type: page
+  - id: bib
+    title: Bibliography
+    file: bib.md
+    type: page
+
