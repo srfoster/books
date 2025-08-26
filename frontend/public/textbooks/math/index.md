@@ -6,6 +6,7 @@ I was recently humbled by the following trivia question: Are there more stars in
 
 * Numbers are a mnemonic system
 
+* Mathematics is a language.  Language is also a mnemonic system...
 
 * Number sense and daily numeric manipulation is best taught through games (K-3?)
 

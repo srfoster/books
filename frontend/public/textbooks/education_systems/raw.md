@@ -2,6 +2,9 @@
 * Define "Education System" (recursive...)
 * Politics: School vouchers, e.g.  Homeschooling anarchists, etc.
 * WL's thesis
+* Teachers, even when most successful, have robbed students:
+  - Truth/Messy vs Clarity/Simple
+  - Digestion on students' behalf gives them pre-digested knowledge, and they become hooked on it
 * Lies/Omissions:
   - Future is unknown.  Yet education is about a child's future. 
   - Education system was "designed"
@@ -12,6 +15,8 @@
   - "Critical thinking" is something both sides agree on.  Hmm, why might that be? :)
 * Segregation/Desegregation
 * AI can bring standardization like never before.  Or the opposite.  And many spirals in between.
+* Mindfulness never taught.  (Yet arguably the most beneficial...)
+* Competition is poorly addressed (often repressed) or left to student interpretation
 * Forgetting is largely forgotten (and repressed)
   - Memory matters!
   - Rote memorization has been vilified
