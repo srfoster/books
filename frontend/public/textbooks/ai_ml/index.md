@@ -6,7 +6,7 @@
 
 This textbook is about artificial intelligence, machine learning, data science, and language models (large and small).  My hope is that readers will gain new practical skills and a deep theoretical understanding.
 
-I began writing this because I could find no other resource that I considered ambitious enough.  Books written for beginners simply too shallow, and the more advanced ones assume too much prior knowledge on the part of the reader.  I wanted a resource I could use in classes I teach, with students who are pursuing bachelor-level coursework in computer science, computer information systems, and organizational leadership.
+I began writing this because I could find no other resource that I considered ambitious enough.  Books written for beginners are simply too shallow, and the more advanced ones assume too much prior knowledge on the part of the reader.  I wanted a resource I could use in classes I teach, with students who are pursuing bachelor-level coursework in computer science, computer information systems, and organizational leadership.
 
 The only prerequisite knowledge I'll assume on your part is that which is I call "strong basic computer skills."  For example, I'll assume that you've used a computer for many years, that you know how to install software, manage files and folders, and that you are confident in your abilities to use the internet to help you when you get stuck.  Ideally, you've used generative AI before, understand what it can currently do, and now want to dive deeper.  
 
