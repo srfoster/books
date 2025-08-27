@@ -22,7 +22,7 @@ Hardly a surprise.  I haven't asked the oracle (the engine) whether this move is
 
 * **Is it good to be unexpected?** I feel it may have some psychological value, but I have no hard evidence for this.  I just know that unexpected moves do, at times, evoke in me an emotional response.  Plus, an unexpected is more likely to force additional calculation from the opponent.  My current theory on the matter is that calculation means: more fatigue, more entropy, more chance of error. 
 
-* **Is it good to avoid complications?** During blindfold games, I find myself worrying (probably for good reason) that I get lost in the sea of complexities.  It's an open question, of course, when to sail directly into the storm and when to avoid it.
+* **Is it good to avoid complications?** During blindfold games, I find myself worrying (probably for good reason) that I might get lost in the sea of complexities and run down my clock.  Still, it's an open question when to sail directly into the storm and when to avoid it.
 
 I chose, at this point, to wait and develop.
 

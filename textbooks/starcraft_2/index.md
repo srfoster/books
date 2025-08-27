@@ -1,45 +1,42 @@
-# StarCraft 2
+# StarCraft II
 
-I don't know why it took so long.  Almost a lifetime, really, to commit to actually memorizing (and therefore practicing, and rehearsing) builds:
+Welcome to the StarCraft II textbook! This guide focuses on practical, Bronze to Grandmaster builds for all matchups and races.
 
-**PvZ - Skytoss**
+## About This Guide
 
-ProbeSc2's Skytoss build:
+TODO: Use Google's pysc2 https://chatgpt.com/c/68af5b72-f294-8333-8574-59224cae7c13
 
-<iframe width="100%" height="600px" src="https://srfoster.github.io/sc2-build-vis/embed.html?build=12%09%20%200%3A00%09%20%20Probe%09%20%20%0A%20%2013%09%20%200%3A12%09%20%20Probe%09%20%20%0A%20%2014%09%20%200%3A19%09%20%20Pylon%09%20%20%0A%20%2014%09%20%200%3A24%09%20%20Probe%09%20%20%0A%20%2015%09%20%200%3A37%09%20%20Probe%20(Chrono%20Boost)%09%20%20%0A%20%2016%09%20%200%3A44%09%20%20Gateway%09%20%20%0A%20%2016%09%20%200%3A47%09%20%20Probe%20x2%20(Chrono%20Boost)%09%20%20%0A%20%2016%09%20%200%3A49%09%20%20Assimilator%09%20%20%0A%20%2018%09%20%201%3A04%09%20%20Probe%09%20%20%0A%20%2019%09%20%201%3A16%09%20%20Probe%09%20%20%0A%20%2020%09%20%201%3A24%09%20%20Nexus%09%20%20%0A%20%2020%09%20%201%3A33%09%20%20Cybernetics%20Core%09%20%20%0A%20%2020%09%20%201%3A36%09%20%20Probe%09%20%20%0A%20%2021%09%20%201%3A41%09%20%20Assimilator%09%20%20%0A%20%2021%09%20%201%3A48%09%20%20Probe%09%20%20%0A%20%2021%09%20%201%3A51%09%20%20Pylon%09%20%20%0A%20%2023%09%20%202%3A07%09%20%20Adept%20(Chrono%20Boost)%09%20%20%0A%20%2023%09%20%202%3A10%09%20%20Warp%20Gate%09Research%20%0A%20%2027%09%20%202%3A24%09%20%20Stargate%09%20%20%0A%20%2028%09%20%202%3A32%09%20%20Stalker%09%20%20%0A%20%2032%09%20%202%3A45%09%20%20Shield%20Battery%09%20%20%0A%20%2037%09%20%203%3A11%09%20%20Void%20Ray%20(Chrono%20Boost)%09%20%20%0A%20%2041%09%20%203%3A15%09%20%20Pylon%09%20%20%0A%20%2043%09%20%203%3A25%09%20%20Assimilator%20x2%09%20%20%0A%20%2045%09%20%203%3A38%09%20%20Stargate%09%20%20%0A%20%2047%09%20%203%3A45%09%20%20Pylon%09%20%20%0A%20%2049%09%20%203%3A59%09%20%20Fleet%20Beacon%09%20%20%0A%20%2050%09%20%204%3A09%09%20%20Pylon%09%20%20%0A%20%2052%09%20%204%3A10%09%20%20Forge%09%20%20%0A%20%2054%09%20%204%3A42%09%20%20Carrier%20(Chrono%20Boost)%09%20%20%0A%20%2054%09%20%204%3A45%09%20%20Photon%20Cannon%20x2%09%20%20%0A%20%2066%09%20%204%3A48%09%20%20Carrier%20(Chrono%20Boost)%09%20%20%0A%20%2070%09%20%205%3A10%09%20%20Nexus%09%20%20%0A%20%2068%09%20%205%3A30%09%20%20Carrier%20(Chrono%20Boost)%09%20%20%0A%20%2068%09%20%205%3A35%09%20%20Shield%20Battery%09%20%20%0A%20%2074%09%20%205%3A40%09%20%20Photon%20Cannon%09%20%20%0A%20%2080%09%20%205%3A45%09%20%20Carrier%20(Chrono%20Boost)%09%20%20%0A%20%2082%09%20%205%3A56%09%20%20Protoss%20Air%20Weapons%20Level%201%09%20%20%0A%20%2084%09%20%206%3A03%09%20%20Photon%20Cannon%09%20%20%0A%20%2094%09%20%206%3A32%09%20%20Carrier%20x2%20(Chrono%20Boost)%09%20%20%0A%20%20103%09%20%206%3A44%09%20%20Assimilator%20x2%09%20%20%0A%20%20108%09%20%207%3A02%09%20%20Stargate%09%20%20%0A%20%20111%09%20%207%3A20%09%20%20Photon%20Cannon%20x2%09%20%20%0A%20%20111%09%20%207%3A21%09%20%20Shield%20Battery%09%20%20%0A%20%20117%09%20%207%3A24%09%20%20Carrier%20(Chrono%20Boost)%09%20%20%0A%20%20123%09%20%207%3A32%09%20%20Carrier%20(Chrono%20Boost)%09%20%20%0A%20%20130%09%20%207%3A54%09%20%20Carrier%20(Chrono%20Boost)%09%20%20%0A%20%20130%09%20%207%3A59%09%20%20Protoss%20Air%20Weapons%20Level%202%20(Chrono%20Boost)%09%20%20%0A%20%20130%09%20%208%3A01%09%20%20Nexus%09%20%20%0A%20%20130%09%20%208%3A18%09%20%20Carrier%20(Chrono%20Boost)%09%20%20%0A%20%20136%09%20%208%3A20%09%20%20Photon%20Cannon%20x2%09%20%20%0A%20%20136%09%20%208%3A24%09%20%20Shield%20Battery%09%20%20%0A%20%20146%09%20%208%3A42%09%20%20Photon%20Cannon%09%20%20%0A%20%20146%09%20%208%3A43%09%20%20Shield%20Battery%20x2%09%20%20%0A%20%20155%09%20%209%3A01%09%20%20Assimilator%20x2%09%20%20%0A%20%20164%09%20%209%3A40%09%20%20Nexus%09%20%20%0A%20%20173%09%20%2010%3A09%09%20%20Photon%20Cannon%09%20%20%0A%20%20188%09%20%2010%3A48%09%20%20Stargate%20x2%09%20%20%0A%20%20189%09%20%2010%3A55%09%20%20Stargate"> </iframe>
+I don't know why it took so long. Almost a lifetime, really, to commit to actually memorizing (and therefore practicing, and rehearsing) builds.
 
-**PvT - Zealot/Archon**
+This collection focuses on proven Bronze to Grandmaster builds from top players like Pig and ProbeSc2. Each build is designed to teach fundamental concepts while being simple enough to execute consistently.
 
-Pig's Zealot Archon B2GM build:
+## Build Categories
 
-<iframe width="100%" height="600px" src="https://srfoster.github.io/sc2-build-vis/embed.html?build=%2014%09%20%200%3A18%09%20%20Pylon%09%20%20%0A%20%2016%09%20%200%3A40%09%20%20Gateway%0A%20%2017%09%20%200%3A54%09%20%20Assimilator%09%0A%20%2020%09%20%201%3A27%09%20%20Nexus%09%20%20%0A%20%2020%09%20%201%3A37%09%20%20Cybernetics%20Core%09%20%20%0A%20%2021%09%20%201%3A50%09%20%20Assimilator%09%20%20%0A%20%2022%09%20%202%3A00%09%20%20Pylon%09%20%20%0A%20%2023%09%20%202%3A13%09%20%20Warpgate%0A%20%2023%20%20%20%20%20%202%3A14%20%20%20%20Stalker%20x3%20(Chrono%20Boost)%09%20%20%0A%20%2026%09%20%202%3A36%09%20%20Robotics%20Facility%09%20%20%0A%20%2033%09%20%203%3A04%09%20%20Pylon%0A%20%2033%20%20%20%20%20%203%3A05%20%20%20%20Gateway%20x2%09%20%20%0A%20%2034%09%20%203%3A16%09%20%20Observer%20(Chrono%20Boost)%09%20%20%0A%20%2034%09%20%203%3A17%09%20%20Immortal%20(Chrono%20Boost)%09%20%20%0A%20%2040%09%20%204%3A06%09%20%20Stalker%20x3%09%20%0A%20%2050%09%20%204%3A35%09%20%20Pylon%20x2%0A%20%2050%20%20%20%20%20%204%3A36%20%20%20%20Twilight%20Council%09%20%20%0A%20%2054%09%20%205%3A03%09%20%20Assimilator%20x%0A%20%2056%09%20%205%3A13%09%20%20Charge%20(Chrono%20Boost)%09%20%20%0A%20%2060%09%20%205%3A39%09%20%20Pylon%20x5%0A%20%2060%20%20%20%20%20%205%3A40%20%20%20%20Gateway%20x7%0A%20%2060%09%20%205%3A55%09%20%20Templar%20Archives%0A%20%2060%20%20%20%20%20%205%3A56%20%20%20%20Pylon%09%20%20%0A%20%2061%09%20%206%3A32%09%20%20Immortal%09%20%20%0A%20%2065%09%20%206%3A43%09%20%20Zealot%20x10%09%20%20%0A%20%2099%09%20%207%3A17%09%20%20Warp%20Prism%20(Chrono%20Boost)%09%20%20%0A%20%20121%09%20%208%3A23%09%20%20Archon%20x5"> </iframe>
+### Protoss Builds
+- **PvZ - Skytoss**: Late-game focused build with Carriers and supporting units
+- **PvT - Zealot/Archon**: Gateway-heavy composition with Charge Zealots
+- **PvP - Blink**: Fast Stalker production with Blink micro
 
-**PvP - Cheese (1 base blink)**
+### Zerg Builds
+- **ZvX - Ling/Bane**: Universal early aggression and map control build
 
-Randomly found on Spawing Tool and maybe should find a better one... (Probably a Robo build...)
+### Terran Builds
+- **TvX - 3rax**: Marine-focused build with Stimpack timing
 
-<iframe width="100%" height="300px" src="https://srfoster.github.io/sc2-build-vis/embed.html?build=%20%2014%09%20%200%3A18%09%20%20Pylon%09%20%20%0A%20%2016%09%20%200%3A39%09%20%20Gateway%09%20%20%0A%20%2017%09%20%200%3A47%09%20%20Assimilator%09%20%20%0A%20%2018%09%20%200%3A56%09%20%20Assimilator%09%20%20%0A%20%2019%09%20%201%3A11%09%20%20Gateway%09%20%20%0A%20%2020%09%20%201%3A27%09%20%20Cybernetics%20Core%09%20%20%0A%20%2021%09%20%201%3A33%09%20%20Pylon%09%20%20%0A%20%2023%09%20%202%3A03%09%20%20Stalker%20x2%0A%20%2028%09%20%202%3A05%09%20%20Warp%20Gate%09Research%0A%20%2028%09%20%202%3A14%09%20%20Pylon%09%20%20%0A%20%2028%09%20%202%3A23%09%20%20Twilight%20Council%09%20%20%0A%20%2028%09%20%202%3A40%09%20%20Stalker%20x2%09%20%20%0A%20%2032%09%20%202%3A55%09%20%20Gateway%09%20%20%0A%20%2032%09%20%202%3A59%09%20%20Blink%09%20%20%0A%20%2032%09%20%203%3A16%09%20%20Stalker%20x2%09%20%20%0A%20%2036%09%20%203%3A22%09%20%20Pylon%09%20%20%0A%20%2036%09%20%203%3A37%09%20%20Pylon%09%20%20%0A%20%2036%09%20%203%3A41%09%20%20Gateway%09%20%20%0A%20%2038%09%20%203%3A55%09%20%20Stalker%20x2%09%20%20%0A%20%2040%09%20%204%3A00%09%20%20Stalker%09%20%20%0A%20%2042%09%20%204%3A21%09%20%20Stalker%20x2"> </iframe>
+## Learning Philosophy
 
-**ZvX**
+Key principles for mastering these builds:
 
-Pig's Ling/Bane Build
+* **Sticking to a repertoire of builds** - Master a few rather than knowing many poorly
+* **Mechanics** - Focus on execution over complexity
+* **How to learn builds** - Practice against AI, then ladder
+* **How to evolve them** - Adapt based on scouting and opponent responses
+* **Replays and videos** - Review and analyze your games
 
-<iframe width="100%" height="500px" src="https://srfoster.github.io/sc2-build-vis/embed.html?build=13%20%200%3A13%20%20Overlord%0A17%20%200%3A52%20%20Hatchery%0A18%20%201%3A08%20%20Extractor%0A17%20%201%3A15%20%20Spawning%20Pool%0A19%20%201%3A42%20%20Overlord%0A20%20%202%3A06%20%20Queen%0A20%20%202%3A07%20%20Queen%0A24%20%202%3A08%20%20Zergling%0A25%20%202%3A09%20%20Zergling%0A28%20%202%3A18%20%20Metabolic%20Boost%0A32%20%202%3A48%20%20Hatchery%0A31%20%202%3A49%20%20Overlord%0A31%20%202%3A59%20%20Queen%0A48%20%204%3A03%20%20Baneling%20Nest%0A47%20%204%3A11%20%20Extractor%0A47%20%204%3A23%20%20Zergling%0A62%20%204%3A48%20%20Evolution%20Chamber%20x2%0A62%20%204%3A50%20%20Lair%0A76%20%205%3A15%20%20Hatchery%20x2%0A85%20%205%3A56%20%20Zerg%20Ground%20Armor%20Level%201%0A85%20%205%3A56%20%20Zerg%20Melee%20Weapons%20Level%201%0A85%20%205%3A58%20%20Centrifugal%20Hooks%0A85%20%206%3A10%20%20Hatchery%0A85%20%206%3A12%20%20Hatchery"> </iframe>
+Each build in this collection has been chosen for its:
+- **Simplicity**: Easy to execute with room for improvement
+- **Effectiveness**: Works from Bronze to high levels
+- **Educational value**: Teaches important game concepts
+- **Adaptability**: Can be modified based on scouting information
 
-
-**TvX**
-
-uThermal's 3rax
-
-<iframe width="100%" height="600px" src="https://srfoster.github.io/sc2-build-vis/embed.html?build=%20%2014%09%20%200%3A17%09%20%20Supply%20Depot%09%20%20%0A%20%2016%09%20%200%3A41%09%20%20Barracks%09%20%20%0A%20%2016%09%20%200%3A45%09%20%20Refinery%09%0A%20%2019%09%20%201%3A31%09%20%20Orbital%20Command%09%20%20%0A%20%2019%09%20%201%3A34%09%20%20Barracks%20Reactor%09%0A%20%2019%09%20%201%3A42%09%20%20Command%20Center%09%0A%20%2020%09%20%201%3A58%09%20%20Supply%20Depot%09%20%20%0A%20%2021%09%20%202%3A10%09%20%20Barracks%20x2%09%20%20%0A%20%2030%09%20%202%3A52%09%20%20Orbital%20Command%09%20%20%0A%20%2030%09%20%202%3A55%09%20%20Barracks%20Tech%20Lab%20x2%09%20%20%0A%20%2035%09%20%203%3A22%09%20%20Stimpack%09%20%20%0A%20%2042%09%20%203%3A46%09%20%20Combat%20Shield%09%20%20%0A%20%2040%09%20%203%3A33%09%20%20Supply%20Depot%09%0A%20%2062%09%20%204%3A46%09%20%20Factory%09%20%20%0A%20%2062%09%20%204%3A47%09%20%20Engineering%20Bay%09%0A%20%2074%09%20%205%3A20%09%20%20Refinery%20x3%09%20%20%0A%20%2074%09%20%205%3A21%09%20%20Terran%20Infantry%20Weapons%20Level%201%09%20%20%0A%20%2076%09%20%205%3A30%09%20%20Action%09%0A%20%2076%09%20%205%3A31%09%20%20Barracks%20x2%09%20%20%0A%20%2087%09%20%205%3A55%09%20%20Factory%20Reactor%09%20%20%0A%20%2087%09%20%205%3A56%09%20%20Starport%09%0A%20%2093%09%20%206%3A35%09%20%20Factory%20Tech%20Lab%09%0A%20%20130%09%20%207%3A15%09%20%20Terran%20Infantry%20Armor%20Level%201%09%20%20"> </iframe>
-
-
-<!--
-
-* Sticking to a repertoire of builds
-* Mechanics (isolated or integrated?)
-* How to learn builds
-* How to evolve them
-* Replays and videos? 
-
--->
+Navigate to the individual build sections to see detailed build orders, timings, and strategic notes.

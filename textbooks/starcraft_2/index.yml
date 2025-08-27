@@ -7,6 +7,30 @@ config:
 
 chapters:
   - id: overview
-    title: StarCraft II
+    title: StarCraft II Overview
     file: index.md
     type: page
+  - id: builds
+    title: Bronze to GM Builds
+    type: section
+    children:
+      - id: zvx-ling-bane
+        title: ZvX - Ling/Bane
+        file: zvx-ling-bane.md
+        type: page
+      - id: pvz-skytoss
+        title: PvZ - Skytoss
+        file: pvz-skytoss.md
+        type: page
+      - id: pvt-zealot-archon
+        title: PvT - Zealot/Archon
+        file: pvt-zealot-archon.md
+        type: page
+      - id: pvp-blink
+        title: PvP - Blink
+        file: pvp-blink.md
+        type: page
+      - id: tvx-3rax
+        title: TvX - 3rax
+        file: tvx-3rax.md
+        type: page
