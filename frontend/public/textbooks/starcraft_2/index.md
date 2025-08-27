@@ -4,7 +4,7 @@ Welcome to the StarCraft II textbook! This guide focuses on practical, Bronze to
 
 ## About This Guide
 
-TODO: https://github.com/ggtracker/sc2reader
+TODO: Use Google's pysc2 https://chatgpt.com/c/68af5b72-f294-8333-8574-59224cae7c13
 
 I don't know why it took so long. Almost a lifetime, really, to commit to actually memorizing (and therefore practicing, and rehearsing) builds.
 
