@@ -130,6 +130,7 @@ const TextbookViewer = ({ textbooks }: TextbookViewerProps) => {
   const { id, chapter, section } = useParams<{ id: string; chapter?: string; section?: string }>()
   const [content, setContent] = useState<string>('')
   const [loading, setLoading] = useState(false)
+  const [sidebarOpen, setSidebarOpen] = useState(false)
   
   const textbook = textbooks.find(t => t.id === id)
   
@@ -198,8 +199,29 @@ const TextbookViewer = ({ textbooks }: TextbookViewerProps) => {
 
   return (
     <div className="textbook-viewer">
-      <aside className="sidebar">
-        <Link to="/">← Back to Library</Link>
+      {/* Mobile toggle button */}
+      <button 
+        className="sidebar-toggle"
+        onClick={() => setSidebarOpen(!sidebarOpen)}
+        aria-label="Toggle navigation"
+      >
+        ☰
+      </button>
+      
+      {/* Sidebar overlay for mobile */}
+      {sidebarOpen && <div className="sidebar-overlay" onClick={() => setSidebarOpen(false)} />}
+      
+      <aside className={`sidebar ${sidebarOpen ? 'sidebar-open' : ''}`}>
+        <div className="sidebar-header">
+          <Link to="/">← Back to Library</Link>
+          <button 
+            className="sidebar-close"
+            onClick={() => setSidebarOpen(false)}
+            aria-label="Close navigation"
+          >
+            ×
+          </button>
+        </div>
         <h2>{textbook.title}</h2>
         <p>{textbook.description}</p>
         

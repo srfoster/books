@@ -26,6 +26,7 @@
   - Rote memorization findings?
 * Standardization efforts widely criticized, but for the wrong reasons
   - Tests presuppose (and define) which skills are important.  (Not reading books, e.g.)
+  - Reading and writing at length are relegated to college
 * Learning => Effort => Discomfort/Suffering => Need to obtain consent => Informed consent => Learning.  Uh oh...
 * Factory model 
 * Tyranny of Subjects
@@ -39,4 +40,6 @@
   - Teachers should be making themselves unnecessary.  But they can't, even when they think they can.  And students/parents resist when they try.
 * Knowledge vs Skill never addressed
   - Mastery levels never incorporated
-
+* N-back / Working memory
+  - https://nbacking.com/game/
+ 
