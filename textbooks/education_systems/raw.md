@@ -1,5 +1,10 @@
 
+Educators fancy that they are the ones guiding their students out of the caves and into the light.  Students will soon discover the truth, that the classrooms were the caves.
+
+
 * Define "Education System" (recursive...)
+* How can equal education prepare students for a fundamentally unequal world? 
+
 * Politics: School vouchers, e.g.  Homeschooling anarchists, etc.
 * WL's thesis
 * Teachers, even when most successful, have robbed students:
