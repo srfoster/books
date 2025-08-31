@@ -3,6 +3,9 @@
 
 <!-- 
 
+Virtue is the only good, and is wisdom a circle?
+* https://chatgpt.com/c/68b351ca-25fc-8321-bc7a-cf7823222cb7
+
 * Gratitude.  Joy.
 
 * Over what, if anything, do we have control always, already, and at all times?

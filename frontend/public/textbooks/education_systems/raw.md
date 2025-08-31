@@ -6,10 +6,11 @@ Educators fancy that they are the ones guiding their students out of the caves a
 * How can equal education prepare students for a fundamentally unequal world? 
 
 * Politics: School vouchers, e.g.  Homeschooling anarchists, etc.
-* WL's thesis
+* WL's thesis (William James connection?)
 * Teachers, even when most successful, have robbed students:
   - Truth/Messy vs Clarity/Simple
   - Digestion on students' behalf gives them pre-digested knowledge, and they become hooked on it
+* Education should be life long.  Education should envelop and embrace humanity.
 * Lies/Omissions:
   - Future is unknown.  Yet education is about a child's future. 
   - Education system was "designed"
@@ -21,6 +22,9 @@ Educators fancy that they are the ones guiding their students out of the caves a
 * Segregation/Desegregation
 * AI can bring standardization like never before.  Or the opposite.  And many spirals in between.
 * Mindfulness never taught.  (Yet arguably the most beneficial...)
+  - Ready-to-hand vs present-at-hand knowledge
+     * Deep vs shallow
+  - We assess directly, but it should be indirect: Assess self-assessment
 * Competition is poorly addressed (often repressed) or left to student interpretation
 * Forgetting is largely forgotten (and repressed)
   - Memory matters!

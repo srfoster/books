@@ -11,7 +11,7 @@ chapters:
     file: index.md
     type: page
   - id: builds
-    title: Bronze to GM Builds
+    title: Attention Is All You Have
     type: section
     children:
       - id: zvx-ling-bane

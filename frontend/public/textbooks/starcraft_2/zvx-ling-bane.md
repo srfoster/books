@@ -1,6 +1,34 @@
 # ZvX - Ling/Bane
 
+
 Pig's Ling/Bane B2GM build for all matchups:
+
+---
+
+Currently working on:
+* Sending one of the early Zerglings to scout
+* "Batching" and "triggers": perfecting the build timings
+  - Queens done, first inject -> 3rd hatch (+queen)!!
+  - 3rd hatch done -> Bane nest batch
+
+
+* Possible forced deviations?
+  - If spot early 1-base marine or hellion, consider swapping into Roaches (no 3rd hatch nor baneling)?  (But only if perfectly timed build does not defend.) 
+
+
+
+---
+
+2v2s with Prismacore
+
+<video src="/textbooks/starcraft_2/Stoic+eeshking_vs_Prismacore+Snake.mp4" controls width="100%"></video>
+
+Best build timings yet?
+<video src="/textbooks/starcraft_2/ThePrimeMime+Stoic_vs_boshek+Prismacore.mp4" controls width="100%"></video>
+
+---
+
+1v1s
 
 <video src="/textbooks/starcraft_2/Beans_vs_Stoic.mp4" controls width="100%"></video>
 <video src="/textbooks/starcraft_2/Beans_vs_Stoic-long.mp4" controls width="100%"></video>
