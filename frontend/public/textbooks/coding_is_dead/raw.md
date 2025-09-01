@@ -1,4 +1,16 @@
 
+* CIS110 -> Make memory/rehearsal front and center
+  - Recursion
+  - Vlogging journey?  Old outcomes are alt path? (But let them choose?)
+* Min/Max concepts: Come up with a concrete list of them for CS (ideally ones that span disciplines)
+  - Pre/post test
+  - Metaphorical thinking
+  - Greedy algorithms
+  - Bottom up / Top down
+  - Breadth first / Depth first
+  - Pseudo-code (for humans / humanities)
+  - Various "data structures of the mind" 
+  - Technical debt (AI coding especially)
 
 * Candidate MinMax Concepts:
   - ...
@@ -8,6 +20,7 @@
   - Can be compiled now
   - The universal human value of algorithms
     - Fiction/non-fiction/"performative"(coding)
+
 
 * You are an information system
   - You used to be you, then you+internet, now you+internet+ai
