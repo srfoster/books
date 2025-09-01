@@ -10,6 +10,30 @@ chapters:
     title: Overview
     file: index.md
     type: page
+  - id: chapter-1
+    title: "Chapter 1: The Death of Code"
+    type: chapter
+    children:
+      - id: oedipus-ai
+        title: "Oedipus: AI Kills Its Parents"
+        file: 01-the-death-of-code/01-oedipus-ai.md
+        type: section
+      - id: self-plus-plus
+        title: "Self++: You as an Organization"
+        file: 01-the-death-of-code/02-self-plus-plus.md
+        type: section
+      - id: language-acquisition
+        title: "Language Acquisition in the AI Age"
+        file: 01-the-death-of-code/03-language-acquisition.md
+        type: section
+      - id: reading-over-writing
+        title: "Reading Over Writing"
+        file: 01-the-death-of-code/04-reading-over-writing.md
+        type: section
+      - id: beyond-multiplier
+        title: "Beyond the Multiplier Theory"
+        file: 01-the-death-of-code/05-beyond-multiplier.md
+        type: section
   - id: bibliography
     title: Bibliography
     file: bib.md

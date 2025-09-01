@@ -10,3 +10,7 @@ chapters:
     title: Music
     file: index.md
     type: page
+  - id: bibliography
+    title: Bibliography
+    file: bib.md
+    type: page

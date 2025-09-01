@@ -1,0 +1,2 @@
+* LLMs play SC2: https://proceedings.neurips.cc/paper_files/paper/2024/hash/f0ebc318e2df08360b2df559e81602e5-Abstract-Conference.html
+* Google Scholar since 2025: https://scholar.google.com/scholar?as_ylo=2025&q=starcraft+2&hl=en&as_sdt=0,48

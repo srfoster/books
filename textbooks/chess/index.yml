@@ -23,6 +23,10 @@ chapters:
         title: Game 4
         file: 01-blindfold-ladder/03-game-4.md
         type: section
+      - id: game-4
+        title: Game 5
+        file: 01-blindfold-ladder/04-game-5.md
+        type: section
   - id: appendices
     title: Appendices
     file: index.md

@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32">
+  <!-- 2x2 chessboard pattern -->
+  <!-- Top-left: white square -->
+  <rect x="0" y="0" width="16" height="16" fill="#f0f0f0"/>
+  <!-- Top-right: black square -->
+  <rect x="16" y="0" width="16" height="16" fill="#333333"/>
+  <!-- Bottom-left: black square -->
+  <rect x="0" y="16" width="16" height="16" fill="#333333"/>
+  <!-- Bottom-right: white square -->
+  <rect x="16" y="16" width="16" height="16" fill="#f0f0f0"/>
+  <!-- Border for definition -->
+  <rect x="0" y="0" width="32" height="32" fill="none" stroke="#222" stroke-width="1"/>
+</svg>
