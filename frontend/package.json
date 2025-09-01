@@ -7,10 +7,12 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
+    "build-prod": "tsc && vite build --base=/",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d dist",
+    "deploy-prod": "npm run build-prod && aws s3 sync dist/ s3://stephenfoster-us/ --delete && aws s3 cp dist/ s3://stephenfoster-us/ --recursive --exclude \"*\" --include \"*.js\" --content-type \"application/javascript\" && aws s3 cp dist/ s3://stephenfoster-us/ --recursive --exclude \"*\" --include \"*.css\" --content-type \"text/css\"",
     "create-textbook": "node scripts/create-textbook.js",
     "create-textbook-advanced": "node scripts/create-textbook-advanced.js"
   },

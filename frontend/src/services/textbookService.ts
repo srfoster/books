@@ -1,5 +1,6 @@
 import { Textbook } from '../types'
 import * as yaml from 'js-yaml'
+import { getBasePath } from '../utils/paths'
 
 // Configuration for available textbooks - only the minimal info needed
 const TEXTBOOK_CONFIGS = [
@@ -37,7 +38,7 @@ export const loadTextbookMetadata = async (path: string): Promise<Textbook | nul
     const isUnderConstruction = config?.under_construction || false
     
     // Use different base paths for development vs production
-    const basePath = window.location.hostname === 'localhost' ? '' : '/books'
+    const basePath = getBasePath()
     // Add cache busting query parameter to ensure fresh content
     const cacheBuster = `?v=${Date.now()}`
     const response = await fetch(`${basePath}/textbooks/${path}/index.yml${cacheBuster}`)

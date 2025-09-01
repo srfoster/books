@@ -1,3 +1,5 @@
+import { getBasePath } from '../utils/paths'
+
 export interface NavigationItem {
   id: string
   title: string
@@ -24,7 +26,7 @@ export const loadMarkdownContent = async (textbookPath: string, fileName: string
   try {
     // Construct the URL to fetch the markdown file from the public directory
     // Use different base paths for development vs production
-    const basePath = window.location.hostname === 'localhost' ? '' : '/books'
+    const basePath = getBasePath()
     // Add cache busting query parameter to ensure fresh content
     const cacheBuster = `?v=${Date.now()}`
     const url = `${basePath}/textbooks/${textbookPath}/${fileName}${cacheBuster}`

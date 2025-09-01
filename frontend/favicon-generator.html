@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Favicon Generator</title>
+</head>
+<body>
+    <canvas id="canvas" width="16" height="16" style="image-rendering: pixelated; width: 160px; height: 160px;"></canvas>
+    <script>
+        const canvas = document.getElementById('canvas');
+        const ctx = canvas.getContext('2d');
+        
+        // 2x2 chessboard pattern for 16x16 favicon
+        // Top-left: white (8x8 pixels)
+        ctx.fillStyle = '#f0f0f0';
+        ctx.fillRect(0, 0, 8, 8);
+        
+        // Top-right: black (8x8 pixels)
+        ctx.fillStyle = '#333333';
+        ctx.fillRect(8, 0, 8, 8);
+        
+        // Bottom-left: black (8x8 pixels)
+        ctx.fillStyle = '#333333';
+        ctx.fillRect(0, 8, 8, 8);
+        
+        // Bottom-right: white (8x8 pixels)
+        ctx.fillStyle = '#f0f0f0';
+        ctx.fillRect(8, 8, 8, 8);
+        
+        // Border
+        ctx.strokeStyle = '#222222';
+        ctx.lineWidth = 1;
+        ctx.strokeRect(0, 0, 16, 16);
+        
+        // Convert to data URL and create download link
+        const dataUrl = canvas.toDataURL('image/png');
+        const link = document.createElement('a');
+        link.download = 'favicon.png';
+        link.href = dataUrl;
+        link.textContent = 'Download 16x16 PNG Favicon';
+        document.body.appendChild(link);
+    </script>
+</body>
+</html>
