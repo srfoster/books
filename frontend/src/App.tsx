@@ -1,6 +1,6 @@
 import { Routes, Route } from 'react-router-dom'
 import { useState, useEffect } from 'react'
-import { Navigation, TextbookList, TextbookViewer, AuthPage } from './components'
+import { Navigation, TextbookList, TextbookViewer, AuthPage, RawNotesViewer } from './components'
 import { Textbook } from './types'
 import { loadAllTextbooks } from './services/textbookService'
 import './App.css'
@@ -61,6 +61,7 @@ function App() {
         <Routes>
           <Route path="/" element={<TextbookList textbooks={textbooks} />} />
           <Route path="/auth" element={<AuthPage />} />
+          <Route path="/textbook/:id/raw" element={<RawNotesViewer textbooks={textbooks} />} />
           <Route path="/textbook/:id" element={<TextbookViewer textbooks={textbooks} />} />
           <Route path="/textbook/:id/:chapter" element={<TextbookViewer textbooks={textbooks} />} />
           <Route path="/textbook/:id/:chapter/:section" element={<TextbookViewer textbooks={textbooks} />} />

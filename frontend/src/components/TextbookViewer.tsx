@@ -1,5 +1,5 @@
-import { useParams, Link } from 'react-router-dom'
-import { useState, useEffect } from 'react'
+import { useParams, Link, useNavigate } from 'react-router-dom'
+import { useState, useEffect, useRef } from 'react'
 import ReactMarkdown from 'react-markdown'
 import remarkGfm from 'remark-gfm'
 import remarkMath from 'remark-math'
@@ -128,11 +128,40 @@ const NavigationTree = ({ chapters, textbookId, currentChapterId, level = 0, par
 
 const TextbookViewer = ({ textbooks }: TextbookViewerProps) => {
   const { id, chapter, section } = useParams<{ id: string; chapter?: string; section?: string }>()
+  const navigate = useNavigate()
   const [content, setContent] = useState<string>('')
   const [loading, setLoading] = useState(false)
   const [sidebarOpen, setSidebarOpen] = useState(false)
+  const longPressTimeoutRef = useRef<number | null>(null)
+  const isLongPressRef = useRef(false)
   
   const textbook = textbooks.find(t => t.id === id)
+  
+  // Long press handlers for secret raw notes access
+  const handleLongPressStart = () => {
+    isLongPressRef.current = false
+    longPressTimeoutRef.current = setTimeout(() => {
+      isLongPressRef.current = true
+      if (textbook) {
+        navigate(`/textbook/${textbook.id}/raw`)
+      }
+    }, 1000) // 1 second long press
+  }
+
+  const handleLongPressEnd = () => {
+    if (longPressTimeoutRef.current) {
+      clearTimeout(longPressTimeoutRef.current)
+      longPressTimeoutRef.current = null
+    }
+  }
+
+  const handleTitleClick = (e: React.MouseEvent) => {
+    // Prevent navigation if this was a long press
+    if (isLongPressRef.current) {
+      e.preventDefault()
+      return false
+    }
+  }
   
   // Find the current item to display - could be a chapter or a section
   let currentItem: Chapter | null = null
@@ -222,7 +251,17 @@ const TextbookViewer = ({ textbooks }: TextbookViewerProps) => {
             ×
           </button>
         </div>
-        <h2>{textbook.title}</h2>
+        <h2 
+          onMouseDown={handleLongPressStart}
+          onMouseUp={handleLongPressEnd}
+          onMouseLeave={handleLongPressEnd}
+          onTouchStart={handleLongPressStart}
+          onTouchEnd={handleLongPressEnd}
+          onClick={handleTitleClick}
+          style={{ cursor: 'pointer', userSelect: 'none' }}
+        >
+          {textbook.title}
+        </h2>
         <p>{textbook.description}</p>
         
         {textbook.chapters.length > 0 && (

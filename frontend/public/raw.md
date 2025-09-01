@@ -22,7 +22,7 @@ AI
   - Can "back prop" be considered "mathematics of self-correction"?
     - Watch more Welch labs...
 
-Religion:wager in and of itself.
+Religion:
   - Design your own religion.  Pascal's wager as a guide for wager design, not as a singular wager in and of itself.
 
 Stoicism:

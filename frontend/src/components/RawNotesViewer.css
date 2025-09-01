@@ -1,0 +1,118 @@
+.raw-notes-viewer {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
+
+.raw-notes-header {
+  border-bottom: 2px solid var(--border-color);
+  padding-bottom: 1rem;
+  margin-bottom: 2rem;
+}
+
+.raw-notes-header h1 {
+  color: var(--text-color);
+  margin: 0 0 0.5rem 0;
+  font-size: 2rem;
+}
+
+.raw-notes-subtitle {
+  color: var(--text-color);
+  opacity: 0.7;
+  font-style: italic;
+  margin: 0;
+}
+
+.raw-notes-content {
+  line-height: 1.6;
+  color: var(--text-color);
+}
+
+.raw-notes-content h1,
+.raw-notes-content h2,
+.raw-notes-content h3 {
+  color: var(--text-color);
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}
+
+.raw-notes-content h1 {
+  font-size: 1.8rem;
+  border-bottom: 2px solid #646cff;
+  padding-bottom: 0.5rem;
+}
+
+.raw-notes-content h2 {
+  font-size: 1.4rem;
+}
+
+.raw-notes-content h3 {
+  font-size: 1.2rem;
+}
+
+.raw-notes-content ul,
+.raw-notes-content ol {
+  margin: 1rem 0;
+  padding-left: 2rem;
+}
+
+.raw-notes-content li {
+  margin: 0.5rem 0;
+}
+
+.raw-notes-content blockquote {
+  border-left: 4px solid #646cff;
+  margin: 1rem 0;
+  padding: 0.5rem 1rem;
+  background-color: var(--hover-bg);
+  font-style: italic;
+  color: var(--text-color);
+  opacity: 0.8;
+}
+
+.raw-notes-content code {
+  background-color: #f4f4f4;
+  padding: 0.2rem 0.4rem;
+  border-radius: 3px;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.raw-notes-content pre {
+  background-color: #f4f4f4;
+  padding: 1rem;
+  border-radius: 4px;
+  overflow-x: auto;
+}
+
+.raw-notes-loading,
+.raw-notes-error {
+  text-align: center;
+  padding: 3rem;
+  color: var(--text-color);
+  opacity: 0.7;
+}
+
+.raw-notes-error {
+  color: #d73a49;
+}
+
+@media (prefers-color-scheme: dark) {
+  .raw-notes-content code {
+    background-color: #333;
+    color: #fff;
+  }
+  
+  .raw-notes-content pre {
+    background-color: #333;
+    color: #fff;
+  }
+}
+
+/* Secret access indicator */
+.raw-notes-header h1::before {
+  content: "🤫 ";
+  opacity: 0.7;
+}
