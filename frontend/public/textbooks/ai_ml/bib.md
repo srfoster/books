@@ -1,3 +1,4 @@
+* https://vinithavn.medium.com/from-multi-head-to-latent-attention-the-evolution-of-attention-mechanisms-64e3c0505f24
 * https://developers.googleblog.com/en/introducing-gemma-3-270m/
 * Misalignment/Evil: https://www.quantamagazine.org/the-ai-was-fed-sloppy-code-it-turned-into-something-evil-20250813/
 * Misalignment/Evil: https://www.livescience.com/technology/artificial-intelligence/the-best-solution-is-to-murder-him-in-his-sleep-ai-models-can-send-subliminal-messages-that-teach-other-ais-to-be-evil-study-claims
