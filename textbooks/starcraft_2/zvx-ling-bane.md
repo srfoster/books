@@ -19,20 +19,45 @@ Currently working on:
 
 ---
 
-2v2s with Prismacore
+## Replay Analysis
 
+### 2v2 Team Games
+
+#### Stoic + eeshking vs Prismacore + Snake
 <video src="/textbooks/starcraft_2/Stoic+eeshking_vs_Prismacore+Snake.mp4" controls width="100%"></video>
 
-Best build timings yet?
+#### ThePrimeMime + Stoic vs boshek + Prismacore (Best Build Timings)
 <video src="/textbooks/starcraft_2/ThePrimeMime+Stoic_vs_boshek+Prismacore.mp4" controls width="100%"></video>
 
----
+#### Stoic + ROOKIE vs Prismacore + moo
+<video src="/textbooks/starcraft_2/SDuck_sp_Stoic+ROOKIE_vs_SDuck_sp_Prismacore+moo.mp4" controls width="100%"></video>
 
-1v1s
+#### Stoic + Bosses davidkills vs Prismacore + Bosses SCORDANIEL
+<video src="/textbooks/starcraft_2/SDuck_sp_Stoic+Bosses_sp_davidkills_vs_SDuck_sp_Prismacore+Bosses_sp_SCORDANIEL.mp4" controls width="100%"></video>
 
+#### xxxCLETOxxx + Stoic vs cyberbadger + Prismacore
+<video src="/textbooks/starcraft_2/xxxCLETOxxx+SDuck_sp_Stoic_vs_cyberbadger+SDuck_sp_Prismacore.mp4" controls width="100%"></video>
+
+#### Ghost + Stoic vs Wise + Prismacore
+<video src="/textbooks/starcraft_2/Ghost+Stoic_vs_Wise+Prismacore.mp4" controls width="100%"></video>
+
+#### TrumpRapes + Stoic vs Penguin + Prismacore
+<video src="/textbooks/starcraft_2/TrumpRapes+SDuck_sp_Stoic_vs_Penguin+SDuck_sp_Prismacore.mp4" controls width="100%"></video>
+
+### 1v1 Games
+
+#### Beans vs Stoic
 <video src="/textbooks/starcraft_2/Beans_vs_Stoic.mp4" controls width="100%"></video>
+
+#### Beans vs Stoic (Extended Analysis)
 <video src="/textbooks/starcraft_2/Beans_vs_Stoic-long.mp4" controls width="100%"></video>
+
+#### Stoic vs TheHound
 <video src="/textbooks/starcraft_2/Stoic_vs_TheHound.mp4" controls width="100%"></video>
+
+#### SDuck Stoic vs HipHopotamus (ZvT - Pylon LE)
+<video src="/textbooks/starcraft_2/SDuck_sp_Stoic_vs_HipHopotamus.mp4" controls width="100%"></video>
+*23-minute game showcasing Ling/Bane vs Terran bio with transitions to Lair tech and Mutalisk play*
 
 <iframe width="100%" height="500px" src="https://srfoster.github.io/sc2-build-vis/embed.html?build=13%20%200%3A13%20%20Overlord%0A17%20%200%3A52%20%20Hatchery%0A18%20%201%3A08%20%20Extractor%0A17%20%201%3A15%20%20Spawning%20Pool%0A19%20%201%3A42%20%20Overlord%0A20%20%202%3A06%20%20Queen%0A20%20%202%3A07%20%20Queen%0A24%20%202%3A08%20%20Zergling%0A25%20%202%3A09%20%20Zergling%0A28%20%202%3A18%20%20Metabolic%20Boost%0A32%20%202%3A48%20%20Hatchery%0A31%20%202%3A49%20%20Overlord%0A31%20%202%3A59%20%20Queen%0A48%20%204%3A03%20%20Baneling%20Nest%0A47%20%204%3A11%20%20Extractor%0A47%20%204%3A23%20%20Zergling%0A62%20%204%3A48%20%20Evolution%20Chamber%20x2%0A62%20%204%3A50%20%20Lair%0A76%20%205%3A15%20%20Hatchery%20x2%0A85%20%205%3A56%20%20Zerg%20Ground%20Armor%20Level%201%0A85%20%205%3A56%20%20Zerg%20Melee%20Weapons%20Level%201%0A85%20%205%3A58%20%20Centrifugal%20Hooks%0A85%20%206%3A10%20%20Hatchery%0A85%20%206%3A12%20%20Hatchery"> </iframe> 
 

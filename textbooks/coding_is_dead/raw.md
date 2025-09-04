@@ -1,5 +1,7 @@
 
 * CIS110 -> Make memory/rehearsal front and center
+  - A/v -> Minimax?  (Possibly with a warmup re: sound visualization...)
+    * Music Book - Crossover/Cross disciplinary
   - Recursion
   - Vlogging journey?  Old outcomes are alt path? (But let them choose?)
 * Min/Max concepts: Come up with a concrete list of them for CS (ideally ones that span disciplines)

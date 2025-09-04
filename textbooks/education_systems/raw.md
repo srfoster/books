@@ -1,8 +1,29 @@
 
-Educators fancy that they are the ones guiding their students out of the caves and into the light.  Students will soon discover the truth, that the classrooms were the caves.
+
+
 
 
 * Define "Education System" (recursive...)
+* Minimax concepts.  (What will we name this...)
+
+
+* Factory Model -> Slaughter House Model / Meat Grinder Model
+  - Violent education is the current norm.  It reflects the violent political context in which it was created.  Now that violence is structurally entrenched and directed at children. 
+  - Education is currently violent, and this needs to change.  The trick is to ensure that we don't replace it with something worse -- which we, as victims of that violence, are at high risk of accidentally doing.
+  
+
+
+
+* Related project:
+  - Mapping out the organization of OC, WA CTCs, Dept of Education, etc...
+  - OC information architecture.  CTCLink, Curriculog, Course catalog, etc.
+  - "AI for administration" / UBI   
+
+
+
+* "Educators fancy that have been the ones guiding their students out of caves and into the light.  Students will soon discover the truth, that the classrooms were part of the caverns all along."
+
+
 * How can equal education prepare students for a fundamentally unequal world? 
 
 * Politics: School vouchers, e.g.  Homeschooling anarchists, etc.
@@ -89,12 +110,20 @@ Educators fancy that they are the ones guiding their students out of the caves a
     * But that's not true.  I'm just teaching a concept that originated in that domain.  
     * People routinely conflate ideas with their domain (cognitive tribalism) -- sometimes accidentally, sometimes maliciously or politically
 * StarTrek: Barclay's BCI
+
+
+
 * Min/Max candidates (TODO: Table with cost and value of each (value to whom? student? society?).  Sort them.  What's the top one?):
   - Fiction/Non-Fiction (useful fictions / metaphor / mnemonics / etc.)
     * Fiction as a skill.  Fiction as knowledge.
     * Examples?
       - Panopticon.edu: Surveyance school, students learn from themselves...  Nothing is forgotten  
     * 3rd kind: "Performative" (Fiction->Non-Fiction.  Causal fiction.  E.g. the Constitution, class charter, etc...)
+  - Systems / Super-organisms / organizations
+    * Extended mind / distributed cognition ("cognition" def)
+    * Systems evolution/design.  Technical debt
+    * Networks / Graphs / System diagrams (Map vocab...)
+
   - "Failure" as necessary to record
     * Remembering what you forgot (in a session where remembering was the goal)
     * Unpleasantness of failure...
@@ -102,9 +131,6 @@ Educators fancy that they are the ones guiding their students out of the caves a
   - Natural selection
   - Memory mechanics (sometimes less is NOT more)
     * Need a source of weirdness and randomness
-  - Systems / Super-organisms / organizations
-    * Extended mind / distributed cognition ("cognition" def)
-    * Systems evolution/design.  Technical debt
   - Education itself
     * A "moddable" education system (coding in/as/for game)
     * Pre-post test

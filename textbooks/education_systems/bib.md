@@ -2,6 +2,9 @@
 
 That's it for now.  More coming soon!
 
+* Distinctions, Systems, Relationships, and Perspectives - https://en.wikipedia.org/wiki/DSRP
+  -  Systems Thinking!
+
 * https://www.csun.edu/~SB4310/How%20People%20Learn.pdf
 * Why Students Don't Like School https://www.amazon.com/Why-Dont-Students-Like-School/dp/047059196X
   - https://moodrmoo.wordpress.com/wp-content/uploads/2014/10/why-dont-students-like-school.pdf
