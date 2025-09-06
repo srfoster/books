@@ -7,16 +7,16 @@ config:
 
 chapters:
   - id: overview
-    title: Introduction to Stoicism
+    title: Stoicism
     file: index.md
     type: page
     
-  - id: main
-    title: Main Concepts
-    file: main.md
-    type: page
-    
-  - id: related
-    title: Related Topics
-    file: related.md
-    type: page
+  - id: appendix
+    title: Appendix
+    file: appendix.md
+    type: chapter
+    children:
+      - id: basic-definition
+        title: "Stoicism Basic Definition"
+        file: stoicism-basic-definition.md
+        type: page

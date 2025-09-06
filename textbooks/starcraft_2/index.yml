@@ -11,12 +11,24 @@ chapters:
     file: index.md
     type: page
   - id: builds
-    title: Attention Is All You Have
+    title: Builds 
     type: section
     children:
       - id: zvx-ling-bane
         title: ZvX - Ling/Bane
         file: zvx-ling-bane.md
+        type: page
+      - id: zvx-ling-bane-analysis
+        title: ZvX - Ling/Bane Analysis
+        file: zvx-ling-bane-analysis.md
+        type: page
+      - id: zvx-ling-bane-1v1-analysis
+        title: ZvX - Ling/Bane 1v1 Analysis
+        file: zvx-ling-bane-1v1-analysis.md
+        type: page
+      - id: zvx-ling-bane-2v2-analysis
+        title: ZvX - Ling/Bane 2v2 Analysis
+        file: zvx-ling-bane-2v2-analysis.md
         type: page
       - id: pvz-skytoss
         title: PvZ - Skytoss
@@ -33,4 +45,12 @@ chapters:
       - id: tvx-3rax
         title: TvX - 3rax
         file: tvx-3rax.md
+        type: page
+  - id: professional
+    title: Professional Analysis
+    type: section
+    children:
+      - id: 1v1-serral
+        title: 1v1 - Serral
+        file: 1v1-serral.md
         type: page
