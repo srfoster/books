@@ -49,4 +49,11 @@ Things I can learn or improve at:
   - Have tried Corruptors and Hydras, both of which have worked.  
   - How to do it smoothly?
 
+---
 
+Things I'm doing to improve:
+* Informally mentally rehearsing some of what I'm working on (e.g. build timings)
+* Looking for achievable improvements after each game 
+* Studying better players 
+  - TrumpRapes 2v2 game
+  - (TODO: C:\Users\ThoughtSTEM\Documents\StarCraft II\Accounts\610572\1-S2-1-1292969\Replays\Multiplayer\Pros)
