@@ -2,7 +2,14 @@
 
 ## 2v2 Team Games
 
-### TrumpRapes + Penguin vs Stoic + Prismacore
+### battlefrog + Stoic vs Horizons + Prismacore 
+<video src="/textbooks/starcraft_2/videos/battlefrog+SDuck_sp_Stoic_vs_Horizons+SDuck_sp_Prismacore.mp4" controls width="100%"></video>
+
+**Match Details:**
+- **Map:** Reclamation LE
+- **Notes:** battlefrog was awesome.  Early greedy 3rd, early speedlings, smooth roach transition
+
+### TrumpBad + Penguin vs Stoic + Prismacore
 <video src="/textbooks/starcraft_2/videos/TrumpRapes+SDuck_sp_Stoic_vs_Penguin+SDuck_sp_Prismacore.mp4" controls width="100%"></video>
 
 ### Ghost + Stoic vs Wise + Prismacore

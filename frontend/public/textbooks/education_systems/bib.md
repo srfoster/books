@@ -2,6 +2,8 @@
 
 That's it for now.  More coming soon!
 
+* Guest, O., Suarez, M., Müller, B., van Meerkerk, E., Oude Groote Beverborg, A., de Haan, R., Reyes Elizondo, A., Blokpoel, M., Scharfenberg, N., Kleinherenbrink, A., Camerino, I., Woensdregt, M., Monett, D., Brown, J., Avraamidou, L., Alenda-Demoutiez, J., Hermans, F., & van Rooij, I. (2025). Against the Uncritical Adoption of 'AI' Technologies in Academia. *Zenodo*. https://doi.org/10.5281/zenodo.17065099
+
 * Distinctions, Systems, Relationships, and Perspectives - https://en.wikipedia.org/wiki/DSRP
   -  Systems Thinking!
 
