@@ -46,6 +46,10 @@ chapters:
         title: TvX - 3rax
         file: tvx-3rax.md
         type: page
+      - id: roach-experiments
+        title: Roach Experiments
+        file: roach-experiments.md
+        type: page
   - id: professional
     title: Professional Analysis
     type: section
