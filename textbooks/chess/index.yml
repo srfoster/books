@@ -27,6 +27,14 @@ chapters:
         title: Game 5
         file: 01-blindfold-ladder/04-game-5.md
         type: section
+  - id: openings
+    title: Opening Theory
+    type: chapter
+    children:
+      - id: the-pirc
+        title: The Pirc Defense
+        file: the-pirc.md
+        type: section
   - id: appendices
     title: Appendices
     file: index.md
