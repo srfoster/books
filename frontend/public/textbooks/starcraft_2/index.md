@@ -4,7 +4,13 @@ I don't know why it took so long. Almost a lifetime, really, to commit to actual
 
 This book resulted from putting my own educational philosophy into action to educate myself.  You'll see certain common themes from throughout my textbooks: the skill/knowledge dichotomy, heavy use of custom educational technology, writing to learn, min cost / max value, etc. 
 
+* **September 21, 2025** - MMR: 2400? - Decided to focus on learning my Ling/Bane Build by focusing on 1) spending resources, 2) staying calm, 3) not switching tech paths (not even building banelings unless I have to).
+
 ## Chapters
+
+### Log
+
+- [Mastering a Tool "System" Phase 1](/#/textbook/starcraft_2/ch1) - The first chapter in my own journey.
 
 ### Strategic Analysis
 - [1v1 vs Serral](1v1-serral.md) - Elite-level gameplay analysis

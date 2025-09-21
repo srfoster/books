@@ -7,8 +7,12 @@ config:
 
 chapters:
   - id: overview
-    title: StarCraft II Overview
+    title: Overview
     file: index.md
+    type: page
+  - id: ch1
+    title: Chapter 1
+    file: ch1.md
     type: page
   - id: builds
     title: Builds 
