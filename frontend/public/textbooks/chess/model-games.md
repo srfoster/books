@@ -1,8 +1,68 @@
+# Danya Games
+
+Last game:
+
+```
+[Event "Live Chess"]
+[Site "Chess.com"]
+[Date "2025.10.18"]
+[Round "?"]
+[White "DanielNaroditsky"]
+[Black "nihalsarin"]
+[Result "0-1"]
+[TimeControl "180"]
+[WhiteElo "3073"]
+[BlackElo "3254"]
+[Termination "nihalsarin won by resignation"]
+[ECO "B10"]
+[EndTime "21:03:39 GMT+0000"]
+[Link "https://www.chess.com/game/live/144454382998?username=danielnaroditsky"]
+
+1. e4 c6 
+2. d4 Nf6 
+3. e5 Nd5 
+4. c4 Nc7 
+5. Nc3 d5 
+6. exd6 exd6 
+7. Bd3 d5 
+8. cxd5 cxd5 
+9. Qf3 Nc6 
+10. Nge2 Bd6 
+11. O-O O-O 
+12. Bf4 Bxf4 
+13. Nxf4 Nxd4 
+14. Qh5 g6
+15. Qh6 Nde6 
+16. h4 Nxf4 
+17. Qxf4 Be6 
+18. h5 d4 
+19. Ne4 Bf5 
+20. h6 Ne6 
+21. Qe5 Bxe4 
+22. Bxe4 Qh4 
+23. Bxb7 Rae8 
+24. Bc6 Re7 
+25. Rae1 Qxh6 
+26. Qf6 Rc7 
+27. Bd5 Ng7 
+28. Re4 Rc1 
+29. Rxc1 Qxc1+ 
+30. Kh2 Qc7+ 
+31. g3 Nh5 
+32. Qg5 Qd6 
+33. Re7 Nf6
+34. Bb3 Qxe7 
+0-1
+```
+
+
 # As Black (Pirc)
 
 * Van Houtte, Thierry - Stypka, Mieczyslaw, 0-1, Kiekrz op, 1995, lichess.org/0AwuMDGu **1. d4 Nf6 2. Nf3 g6 3. Nc3 Bg7 4. Bg5 O-O 5. e4 d6 6. Bc4 Nxe4 7. Nxe4 d5 8. Bd3 dxe4 9. Bxe4 Nd7 10. c3 Nf6 11. Bc2 Qd5 12. h3 Qb5 13. Rb1 Be6 14. Bd3 Qb6 15. b3 Bd5 16. Be3 Qa5 17. Qc2 Bxf3 18. gxf3 Nd5 19. b4 Qb6 20. Be4 Qe6 21. h4 h5 22. c4 Nxe3 23. fxe3 c6 24. Kf2 Rad8 25. Rbg1 Kh8 26. Bxg6 fxg6 27. Rxg6 Rf6 28. Rhg1 Rdf8 29. Rxg7 Rxf3+ 30. Ke1 Qxe3+ 31. Kd1 Rf1+**
 
 # Historically Interesting
+
+* From Willy Hindrick's book.  Greco vs NN - **1. e4 e5 2. f4 Bc5 3. Nf3 d6 4. ce Qe7 5. d4 exd4 6. cxd4 Qxe4+? 7. Kf2! Bb4 8. a3! Ba5 9. b4 Bb6 10. Bb5+ Kf8 11. Re1 Qf5 12. Re8#**
 
 These are the original 6 games that I studied when embarking on blindfold training.  I
 
