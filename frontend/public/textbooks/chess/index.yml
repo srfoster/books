@@ -35,6 +35,10 @@ chapters:
         title: The Pirc Defense
         file: the-pirc.md
         type: section
+  - id: danya-games
+    title: Danya Games
+    file: danya-games.md
+    type: chapter
   - id: appendices
     title: Appendices
     file: index.md
