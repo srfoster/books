@@ -1,11 +1,28 @@
 # The Pirc Defense
 
-The Pirc Defense is a hypermodern opening characterized by Black's fianchettoed king's bishop and flexible pawn structure. This chapter covers the major systems and variations that arise from the Pirc.
-
-## Austrian Attack Variations
+## Austrian Attack
 
 ### Austrian Attack — Early e5
-**1.e4 d6 2.d4 Nf6 3.Nc3 g6 4.f4 Bg7 5.e5 Nfd7 6.Nf3 c5 7.exd6 O-O 8.Be3 exd6 9.Qd2 Nc6 10.O-O-O Qa5 11.a3 Nf6**
+
+In the Pirc, the e5 square is one of the key battlegrounds.  Let's first explore what happens if White energetically tries to play **e4->e5**
+
+**1.e4 d6 2.d4 Nf6 3.Nc3 g6 4.f4 Bg7** 
+
+Our response to the Austrian is no response at all.  We continue with the normal plan, in spite of what seems like aggression from White.  **4. f4** seems like one of those moves that has no drawbacks because Black isn't positioned aggressively enough.  However, things are more subtle.  An alternative ("Pirc-y") view might be that White's **f4->e5** plan actually plays into Black's hands by putting more stuff on the long diagonal.  So **4. Bg7** appears to "do nothing" -- but actually, it says, "I'm ready, bring it on..."
+
+And if White does...
+
+**5.e5 Nfd7 6.Nf3 c5 7.exd6 O-O**
+
+The moral of the story being that if White plays too quickly (i.e. trying to play **e5** before Black has castled), Black has a nice resource: Fading back and counter punching with **Nd7->c5.**  Black can even afford to do this prior to castling because White isn't castled either, and so Black can even afford to ignore **7. exd6** and just castle.  (Exercise: If **8. dxe7**, what happens?)
+
+White blocks the e-file first, tries to build a battery, and castle queenside.   
+
+**8.Be3 exd6 9.Qd2 Nc6 10.O-O-O Qa5 11.a3 Nf6**
+
+
+
+---
 
 ### Austrian Attack 6.e5 (Unzicker Attack) — dxe5 — Endgame Variation
 **1.e4 d6 2.d4 Nf6 3.Nc3 g6 4.f4 Bg7 5.Nf3 O-O 6.e5 dxe5 7.dxe5 Qxd1+ 8.Nxd1 Nd5 9.c4 Nb6**

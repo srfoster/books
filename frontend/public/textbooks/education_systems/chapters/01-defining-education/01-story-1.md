@@ -1,5 +1,28 @@
 # Making the Sausage 
 
+<!-- 
+
+* Reasons why edu needs to be (or will be) different now.
+  - AI:
+    * All teachers can be coders now     
+      - Writing (books, prompt engineering, etc.) == software engineering 
+        * Non-linear processes / deferred decisions / etc.
+        * Agile processes
+        * Working in teams
+    * We have access to truly "declarative" writing.  Executable documents.
+    * Students can be self teachers
+    * Bureaucratic systems... Unclear.  More power?  Less?  (Time to fight?)
+    * Subject "silos" can/will be torn down.  New ones built?
+    * Economically.  How much of the work can you imagine being done by AI? 
+  - Politics:
+    * Linguisitic Civil War
+
+[Faith Systems]: 
+  * Does AI create new possibilities?  e.g. Singularity == Messiah
+    - Harari's "techno religion" concept
+
+-->
+
 In this chapter, we'll define "education" and "education systems" by way of a few key stories.
 
 To start things off, I spent the summer of 2025, the same summer I got married, revising a "foundations in computing" course called CIS110 -- mandatory for students in various majors and taken by hundreds of students at Olympic College every year.  I had taught the course since 2022, both online and in person, but 2025 was different.

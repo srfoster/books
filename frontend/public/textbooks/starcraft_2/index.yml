@@ -7,8 +7,12 @@ config:
 
 chapters:
   - id: overview
-    title: StarCraft II Overview
+    title: Overview
     file: index.md
+    type: page
+  - id: ch1
+    title: Chapter 1
+    file: ch1.md
     type: page
   - id: builds
     title: Builds 
@@ -45,6 +49,10 @@ chapters:
       - id: tvx-3rax
         title: TvX - 3rax
         file: tvx-3rax.md
+        type: page
+      - id: roach-experiments
+        title: Roach Experiments
+        file: roach-experiments.md
         type: page
   - id: professional
     title: Professional Analysis
