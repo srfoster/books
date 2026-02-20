@@ -149,6 +149,7 @@ class BrowserController:
         try:
             import pytesseract
             from PIL import Image, ImageEnhance
+            import cv2
             
             # Always take a fresh screenshot
             temp_file = "/tmp/ocr_screenshot.png"
@@ -166,29 +167,80 @@ class BrowserController:
             if img.mode != 'RGB':
                 img = img.convert('RGB')
             
-            # Upscale 2x for better OCR
+            # Upscale 3x for better OCR on small button text
             width, height = img.size
-            img = img.resize((width * 2, height * 2), Image.LANCZOS)
+            img = img.resize((width * 3, height * 3), Image.LANCZOS)
             
             # Moderate contrast enhancement
             enhancer = ImageEnhance.Contrast(img)
             img = enhancer.enhance(1.5)
             
             # Convert to grayscale
-            img = img.convert('L')
+            img_gray = img.convert('L')
             
-            # Run OCR
-            text = pytesseract.image_to_string(img, config=r'--oem 3 --psm 6')
+            # Run OCR on normal grayscale
+            text1 = pytesseract.image_to_string(img_gray, config=r'--oem 3 --psm 6')
             
-            if not text.strip():
+            # Also try extracting white text on colored backgrounds (like buttons)
+            # Convert to numpy array for OpenCV processing
+            img_np = np.array(img)
+            img_bgr = cv2.cvtColor(img_np, cv2.COLOR_RGB2BGR)
+            
+            # Convert to HSV to better isolate colors
+            img_hsv = cv2.cvtColor(img_bgr, cv2.COLOR_BGR2HSV)
+            
+            # Create mask for bright/white pixels with more lenient thresholds
+            # This should catch light gray and white text
+            lower_white = np.array([0, 0, 150])  # Lower threshold for brightness
+            upper_white = np.array([180, 80, 255])  # Allow more saturation
+            mask_white = cv2.inRange(img_hsv, lower_white, upper_white)
+            
+            # Dilate to connect nearby white pixels (helps with anti-aliased text)
+            kernel = np.ones((2, 2), np.uint8)
+            mask_white = cv2.dilate(mask_white, kernel, iterations=1)
+            
+            # Create white text on black background image
+            white_text_img = cv2.bitwise_and(img_bgr, img_bgr, mask=mask_white)
+            white_text_gray = cv2.cvtColor(white_text_img, cv2.COLOR_BGR2GRAY)
+            
+            # Threshold to make it pure black and white
+            _, white_text_thresh = cv2.threshold(white_text_gray, 1, 255, cv2.THRESH_BINARY)
+            
+            # Apply morphological operations to clean up
+            white_text_thresh = cv2.morphologyEx(white_text_thresh, cv2.MORPH_CLOSE, kernel)
+            
+            # Save for debugging
+            cv2.imwrite("/tmp/ocr_white_text.png", white_text_thresh)
+            print("White text extraction saved to /tmp/ocr_white_text.png")
+            
+            # Run OCR on the white text extraction with PSM 11 (sparse text - better for buttons)
+            text2 = pytesseract.image_to_string(white_text_thresh, config=r'--oem 3 --psm 11')
+            
+            # Also try with PSM 6 for better structured text
+            text3 = pytesseract.image_to_string(white_text_thresh, config=r'--oem 3 --psm 6')
+            
+            # Combine results
+            all_text = text1
+            
+            # Add white text results if they're different
+            white_texts = []
+            if text2.strip():
+                white_texts.append(text2.strip())
+            if text3.strip() and text3.strip() not in white_texts:
+                white_texts.append(text3.strip())
+            
+            if white_texts:
+                all_text += "\n\n[White text on colored backgrounds:]\n" + "\n".join(white_texts)
+            
+            if not all_text.strip():
                 print("No text found. The screenshot might be blank or contain no readable text.")
                 print(f"Check the screenshot at: {temp_file}")
             else:
                 print("=== OCR Results ===")
-                print(text)
+                print(all_text)
                 print("===================")
             
-            return text
+            return all_text
             
         except ImportError:
             print("Error: pytesseract not installed. Install with: pip install pytesseract")
